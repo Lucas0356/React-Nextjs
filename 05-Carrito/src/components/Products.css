@@ -6,11 +6,12 @@
 }
 
 .products ul {
+    margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,
+    grid-template-columns: repeat(4,
             minmax(200px,
                 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .products li {
@@ -19,13 +20,9 @@
     gap: 1rem;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, .1);
     border-radius: 4px;
-    background: #111;
-    color: #fff;
     padding: 1rem;
-}
-
-.products h3 {
-    margin: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
 }
 
 .products span {
@@ -41,3 +38,38 @@
     object-fit: cover;
     background: #fff;
 }
+
+/* Estilo para el botón cuando se agrega al carrito */
+.add-button {
+    background-color: #0f9d58; /* Verde brillante cuando se agrega al carrito */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #0c8346; /* Verde más oscuro al pasar el mouse */
+}
+
+
+/* Estilo para el botón cuando se elimina del carrito */
+.remove-button {
+    background-color: #db4437; /* Rojo brillante cuando se elimina del carrito */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+    background-color: #b23128; /* Rojo más oscuro al pasar el mouse */
+}
+
+
+
+

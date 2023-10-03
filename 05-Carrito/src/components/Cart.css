@@ -6,6 +6,7 @@
     right: 0px;
     top: 0px;
     width: 200px;
+    overflow-y: auto; /* Agrega un desplazamiento vertical cuando sea necesario */
 }
 
 .cart img {
