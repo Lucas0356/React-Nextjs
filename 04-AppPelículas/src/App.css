@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+header{
+  text-align: center;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error{
+  color: rgb(146, 8, 8);
+}
+
+/* main styles */
+
+main{
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+
+.movies{
+  width: 100%;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+}
+
+.movie{
+  text-align: center;
+}
+
+
+.movie img{
+  margin-top: 16px;
+  border-radius: 8px;
+}
