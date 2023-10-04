@@ -1,0 +1,28 @@
+.post h3 {
+    font-size: 1.3rem;
+}
+
+article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* Agrega una sombra */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Agrega una transición suave */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+article:hover {
+    /* Cambia la sombra en hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+article .post {
+    width: 80%;
+}
