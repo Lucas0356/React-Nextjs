@@ -1,0 +1,8 @@
+react server components = se renderizan en el servidor 
+
+Los componentes de Next.js 13 dentro de la carpeta APP son, por defecto, siempre ejecutados en el servidor
+Por lo tanto si necesitamos de alguna forma crear componentes que integran interactividad que necesitan estado que funcionen con un Hook como useState, useEffect, useReducer, si necesitas acceder a la API del navegador, todo eso no lo podemos hacer por defecto en un componente.
+
+
+
+ npm install material-icons
