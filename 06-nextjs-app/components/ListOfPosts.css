@@ -1,3 +1,4 @@
+/* Estilos para el contenedor principal de los posts */
 .posts-container {
     margin-top: 30px;
     padding: 20px;
@@ -6,21 +7,32 @@
     gap: 20px;
 }
 
+/* Estilos para cada artículo de post */
 .post {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
+/* Estilos para el título dentro de cada artículo */
+.post .title{
+    padding-bottom: 8px;
+}
+
+/* Contenedor del botón "Me gusta" */
 .like-button-container {
     margin-top: auto; /* Empuja el botón hacia la parte inferior */
     align-self: flex-end; /* Alinea el botón al final del artículo, es decir, a la derecha */
 }
 
+/* Estilos cuando se pasa el mouse sobre un artículo */
 article:hover {
-    /* Cambia la sombra en hover */
+    /* Cambia la sombra */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    /* Se agrega un borde rojo debajo de cada artículo */
+    border-bottom: 2px solid #ff4848;
 }

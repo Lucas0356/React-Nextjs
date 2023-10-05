@@ -1,30 +1,41 @@
-// Mock de datos
-import posts from '../app/mocks/posts.json';
-// Estilos
+// Importa el archivo JSON de mock de posts
+import posts from '../app/mocks/posts.json'
+
+// Importa los estilos del componente
 import './ListOfPosts.css'
-// Importamos la etiqueta Image de Next.js
-import Image from 'next/image';
-// Importamos componentes
+
+// Importa la etiqueta Image de Next.js para mostrar imágenes
+import Image from 'next/image'
+
+// Importa el componente LikeButton
 import { LikeButton } from '../components/LikeButton'
 
-export default function ListOfPosts() {
+// Importa la etiqueta Link de Next.js para la navegación
+import Link from 'next/link'
+
+export default function ListOfPosts () {
+  // Comprueba si hay posts en el mock de datos
   const hasPosts = posts?.length > 0
 
   return (
-    <div className="posts-container">
+    <div className='posts-container'>
       {hasPosts
         ? (
-          posts.slice(0, 8).map((post) => (
-            <article className='post' key={post.id}>
-              <h3>{post.title}</h3>
-              <p>{post.body}</p>
-              <div className="like-button-container">
-                <LikeButton />
-              </div>
-            </article>
-          ))
-        )
+          // Mapea y muestra los primeros 10 posts si existen
+          posts.slice(0, 10).map((post) => (
+              <article className='post' key={post.id}>
+                <Link className='link' href='/posts/[id]' as={`/posts/${post.id}`}>
+                  <h3 className='title'>{post.title}</h3>
+                  <p>{post.body}</p>
+                </Link>
+                <div className='like-button-container'>
+                  <LikeButton />
+                </div>
+              </article>
+            ))
+          )
         : (
+          // Muestra un mensaje si no se encuentran posts
           <article>
             <p>No se han encontrados posts</p>
             <Image
@@ -34,7 +45,7 @@ export default function ListOfPosts() {
               height={200}
             />
           </article>
-        )}
+          )}
     </div>
-  );
+  )
 }
