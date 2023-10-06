@@ -1,4 +1,4 @@
-# React Projects
+# React & Next.js Projects
 Este repositorio contiene una colección de proyectos desarrollados con React y Next.js.
 
 Todos los proyectos en este repositorio se basan en el contenido de los siguientes cursos en YouTube:
