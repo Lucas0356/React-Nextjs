@@ -22,7 +22,7 @@ export default function ListOfPosts () {
       {hasPosts
         ? (
           // Mapea y muestra los primeros 10 posts si existen
-          posts.slice(0, 10).map((post) => (
+            posts.slice(0, 8).map((post) => (
               <article className='post' key={post.id}>
                 <Link className='link' href='/posts/[id]' as={`/posts/${post.id}`}>
                   <h3 className='title'>{post.title}</h3>
