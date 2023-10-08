@@ -1,0 +1,102 @@
+/* Estilos para el header */
+.header{
+    width: 100%;
+    height: 90px;
+    background-color: #000;
+    /* Posición fija para mantenerlo en la parte superior */
+    position: fixed;
+    top: 0;
+    display: flex;
+    /* Centrar verticalmente los elementos dentro del encabezado */
+    align-items: center;
+    /* Valor de z-index para la superposición */
+    z-index: 1;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* Estilos para el menú de navegación */
+.menu {
+    display: flex;
+    /* Alinear los elementos a la derecha */
+    justify-content: flex-end;
+    /* Espacio entre los elementos del menú */
+    gap: 15px;
+    /* Eliminar los puntos de lista */
+    list-style: none;
+}
+
+/* Estilos para cada elemento del menú */
+.menu-item {
+    text-align: center;
+    padding: 15px 10px;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 200ms;
+    border-bottom: 2px transparent;
+}
+
+/* Estilos cuando se pasa el mouse sobre un elemento del menú */
+.menu-item:hover {
+    color: #ff4848;
+    border-bottom: 2px solid #ff4848;
+}
+
+/* Estilos para la navbar movile ----------------------------------------------------------------- */ 
+
+/* Estilos para el botón de menú desplegable */
+.menu-button {
+    /* Inicialmente oculta el botón en pantallas grandes */
+    display: none;
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff4545;
+    transition: color 200ms; /* Agrega una transición suave para el cambio de color */
+}
+
+.menu-button > .icon{
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.menu-button:hover {
+    color: #ff4848; /* Cambia el color al pasar el mouse */
+}
+
+.menu.open {
+    /* Activa el menú */
+    display: block;
+    /* Posición fija para mantenerlo en la parte superior */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    margin-top: 90px;
+}
+
+/* Media query para pantallas móviles (menores o iguales a 768px) */
+@media (max-width: 768px) {
+    .menu-button {
+        /* Muestra el botón en pantallas móviles */
+        display: block;
+    }
+    .menu {
+        /* Ocultamos el menú en pantallas móviles */
+        display: none;
+    }
+    /* Estilos cuando se pasa el mouse sobre un elemento del menú */
+    .menu-item:hover {
+        background-color: #ff4848; /* Cambia el fondo cuando se pasa el mouse */
+        color: #fff; /* Cambia el color del texto cuando se pasa el mouse */
+        border: inherit; /* Quitamos el efecto del border red */
+        transition: background-color 0.2s, color 0.2s; /* Agrega transiciones suaves */
+    }
+}

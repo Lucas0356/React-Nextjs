@@ -5,7 +5,6 @@ import { useState } from 'react'
 
 // Importamos componentes
 import LikeButton from './LikeButton'
-import ListOfComments from './ListOfComments'
 
 // Importamos los estilos
 import styles from '../styles/Post.module.css'
