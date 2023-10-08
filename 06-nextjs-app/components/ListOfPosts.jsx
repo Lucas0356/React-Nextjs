@@ -13,7 +13,7 @@ export default function ListOfPosts() {
       {
         /* Mapea y muestra los primeros 8 posts  */
         posts.slice(0, 8).map((post) => (
-          <Post post={post} withComments={false} />
+          <Post post={post} key={post.id}/>
           ))
       }
     </div>

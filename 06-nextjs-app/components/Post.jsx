@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 export default function SinglePost({ post }) {
     return (
-        <article className={styles.post} key={post.id}>
+        <article className={styles.post}>
             <Link href='/posts/[id]' as={`/posts/${post.id}`}>
                 <h3 className='title'>{post.title}</h3>
                 <p>{post.body}</p>
