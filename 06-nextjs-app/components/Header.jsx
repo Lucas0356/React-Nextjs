@@ -56,8 +56,8 @@ export function Header() {
         {/* Menú de navegación */}
         <ul className={`${styles.menu} ${menuOpen ? styles.open : ''}`}>
           {links.map(({ label, route }) => (
-            <Link href={route}>
-              <li className={styles['menu-item']} key={route} onClick={closeMenu}>
+            <Link href={route} key={route}>
+              <li className={styles['menu-item']} onClick={closeMenu}>
                 {label}
               </li>
             </Link>
