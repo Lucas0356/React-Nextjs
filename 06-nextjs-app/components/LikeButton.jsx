@@ -10,7 +10,7 @@ import { useState } from 'react'
 // Importamos el componente de icono
 import IconComponent from '../components/IconComponent'
 
-export function LikeButton () {
+export default function LikeButton () {
   const [liked, setLiked] = useState(false)
 
   const handleClick = () => {

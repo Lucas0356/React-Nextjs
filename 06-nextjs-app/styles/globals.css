@@ -10,7 +10,6 @@
   color: black; /* Color de texto predeterminado */
 }
 
-
 /* Estilos para el documento HTML y el cuerpo */
 html, body {
   font-size: 18px; /* Tamaño de fuente predeterminado */
@@ -18,17 +17,13 @@ html, body {
   overflow-x: hidden; /* Ocultar la barra de desplazamiento horizontal */
   min-height: 100vh;
   background-color: #fffefe;
-  margin: 0 auto;
   scroll-behavior: smooth; /* Comportamiento de desplazamiento suave (scrollbar) */
-  display: flex;
-  justify-content: center; /* Centrar horizontalmente */
-  align-content: center; /* Centrar verticalmente */
 }
 
 /* Estilos para el contenido principal */
 main{
   margin-top: 90px; /* Margen superior para dejar espacio para el encabezado */
-  padding: 20px;
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,4 +35,12 @@ main{
 a {
   color: inherit; /* Heredar el color del texto de su elemento padre */
   text-decoration: none; /* Eliminar subrayado predeterminado */
+}
+
+
+/* Media query para pantallas móviles (menores o iguales a 768px) */
+@media (max-width: 768px) {
+  html, body {
+      font-size: 16px;
+  }
 }

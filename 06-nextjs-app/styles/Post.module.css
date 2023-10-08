@@ -1,0 +1,66 @@
+/* Estilos para cada artículo de post */
+.post {
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Estilos cuando se pasa el mouse sobre un post */
+.post:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Cambia la sombra */
+    border-bottom: 2px solid #ff4848; /* Se agrega un borde rojo debajo de cada artículo */
+}
+
+/* Estilos para el título dentro de cada artículo */
+.post .title {
+    padding-bottom: 10px;
+}
+
+/* Contenedor del botón "Me gusta" */
+.like-button-container {
+    padding-top: 10px;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    align-self: flex-end; /* Alinea el container al final del artículo, es decir, a la derecha */
+}
+
+/* Contenedor del botón "Me gusta" y "Ver comentarios" */
+.buttons-container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: auto; /* Empuja los botones hacia la parte inferior */
+    align-self: flex-end; /* Alinea el container al final del artículo, es decir, a la derecha */
+}
+
+/* Estilos para el boton "Ver comentarios" */
+.comments-button {
+    align-self: center;
+}
+
+/* Estilos cuando se pasa el mouse sobre "Ver comentarios" */
+.comments-button:hover {
+    color: #ff4848;
+    transition: color 0.3s ease-in-out; /* Agrega una animación de pulsación */
+}
+
+/* Media query para pantallas móviles muy pequeñas (menores o iguales a 300) */
+@media (max-width: 300px) {
+    /* Estilos para cada artículo de post */
+    .post {
+        padding: 10px;
+        border: 1px solid #ccc;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilos cuando se pasa el mouse sobre un post */
+    .post:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Cambia la sombra */
+        border-bottom: 1px solid #ff4848; /* Se agrega un borde rojo debajo de cada artículo */
+    }
+}

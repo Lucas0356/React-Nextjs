@@ -1,0 +1,25 @@
+/* Estilos para el contenedor de posts */
+.posts-container {
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Media query para pantallas móviles (menores o iguales a 768px) */
+@media (max-width: 768px) {
+    /* Estilos para el contenedor de posts */
+    .posts-container {
+        margin: 0 5%;
+    }
+}
+
+/* Media query para pantallas móviles muy pequeñas (menores o iguales a 300) */
+@media (max-width: 300px) {
+    /* Estilos para el contenedor de posts */
+    .posts-container {
+        margin: 0 1%;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
