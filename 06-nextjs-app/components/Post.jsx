@@ -15,7 +15,7 @@ export default function SinglePost({ post }) {
                 <p>{post.body}</p>
             </Link>
             <div className={styles['like-button-container']}>
-                <LikeButton />
+            <LikeButton id={post.id} type="post" />
             </div>
         </article>
     )

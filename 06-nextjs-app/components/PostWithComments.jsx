@@ -32,7 +32,7 @@ export default function PostWithComments({ post, comments=null }) {
                     onClick={handleClick}>
                     {commentsVisibility ? 'Hide comments' : 'Show comments'}
                 </Link>
-                <LikeButton />
+                <LikeButton id={post.id} type="post" />
             </div>
         </article>
         {comments}

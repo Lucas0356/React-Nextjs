@@ -38,7 +38,7 @@ export default function ListOfComments() {
           <h5 className={styles['comment-title']}>{comment.name}</h5>
           <p className={styles['comment-body']}>{comment.body}</p>
           <div className={styles['like-button-container']}>
-            <LikeButton />
+            <LikeButton id={comment.id} type="comment" />
           </div>
           <hr className={styles['comment-separator']}></hr>
         </article>
