@@ -1,8 +1,8 @@
 // Le indicamos a next que LikeButton necesita utilizar el cliente y que por lo tanto no va a ser de servidor.
 'use client'
 
-// Importamos estilos
-import './LikeButton.css'
+// Importamos los estilos
+import styles from '../styles/LikeButton.module.css'
 
 // Importamos los hooks
 import { useState, useEffect } from 'react'
@@ -22,7 +22,7 @@ export default function LikeButton ({ type, id }) {
     if (storedLiked) {
       setLiked(JSON.parse(storedLiked));
     }
-  }, [storageKey]);
+  }, []);
 
   const handleClick = () => {
     // Creamos nueva variable y así garantizamos que estamos trabajando con el valor actualizado de liked 
@@ -40,8 +40,11 @@ export default function LikeButton ({ type, id }) {
   };
 
   return (
-    <button className='like-button' onClick={handleClick}>
-      <IconComponent icon='favorite' className={liked ? 'liked' : 'not-liked'} />
+    <button className={styles['like-button']} onClick={handleClick}>
+      <IconComponent
+        iconName="favorite"
+        className={`${styles.icon} ${liked ? styles.liked : styles['not-liked']}`}
+      />
     </button>
   )
 }

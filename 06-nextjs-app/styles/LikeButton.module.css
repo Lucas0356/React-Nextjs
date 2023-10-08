@@ -1,4 +1,4 @@
-/* Estilos para el botón */
+/* Estilos para el botón de 'Me Gusta' */
 .like-button {
     padding: 10px 20px;
     font-size: 1rem;
@@ -12,25 +12,30 @@
 /* Estilos comunes para los íconos */
 .icon {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    border: 1px solid red;
 }
 
 /* Estilos para el botón cuando está likeado */
-.icon.liked {
+.liked {
     color: #FF0040;
-    transform: scale(1.1); /* Hace que el corazón sea un poco más grande al hacer like */
-    animation: like 0.3s ease-in-out alternate; /* Agrega una animación de pulsación */
+    /* Hace que el corazón sea un poco más grande al estar likeado */
+    transform: scale(1.1);
+    /* Aplica la animación 'like' con una duración de 0.5 segundos y repetición infinita */
+    animation: like 0.3s ease-in-out alternate;
 }
 
 /* Estilos para el botón cuando no está likeado */
-.icon.not-liked {
+.not-liked {
     color: #858585;
 }
 
 /* Animación al dar like (se agranda el corazon y luego vuelve al tamaño original) */
 @keyframes like {
+    /* En el 0% de la animación (inicio), el corazón se escala al 120% de su tamaño original */
     0% {
         transform: scale(1.2);
     }
+    /* En el 100% de la animación (final), el corazón vuelve a su tamaño original (escala 100%) */
     100% {
         transform: scale(1.0);
     }
