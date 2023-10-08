@@ -58,7 +58,8 @@
     border: none;
     cursor: pointer;
     color: #ff4545;
-    transition: color 200ms; /* Agrega una transición suave para el cambio de color */
+    /* Agrega una transición suave para el cambio de color */
+    transition: color 200ms;
 }
 
 .menu-button > .icon{
@@ -67,7 +68,8 @@
 }
 
 .menu-button:hover {
-    color: #ff4848; /* Cambia el color al pasar el mouse */
+    /* Cambia el color al pasar el mouse */
+    color: #ff4848;
 }
 
 .menu.open {
@@ -75,11 +77,10 @@
     display: block;
     /* Posición fija para mantenerlo en la parte superior */
     position: fixed;
-    top: 0;
+    top: 90px;
     left: 0;
     background-color: #000;
     width: 100%;
-    margin-top: 90px;
 }
 
 /* Media query para pantallas móviles (menores o iguales a 768px) */
@@ -89,14 +90,34 @@
         display: block;
     }
     .menu {
-        /* Ocultamos el menú en pantallas móviles */
-        display: none;
+        /* Establece la opacidad inicial en 0 (lo oculta) */
+        opacity: 0;
+        /* Desactiva eventos del mouse cuando está oculto */
+        pointer-events: none; 
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        /* Desplaza el menú hacia arriba */
+        transform: translateY(-100%);
+        /* Cambia la posición a absoluta para que esté encima de otros elementos */
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        background-color: #000;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     }
     /* Estilos cuando se pasa el mouse sobre un elemento del menú */
     .menu-item:hover {
-        background-color: #ff4848; /* Cambia el fondo cuando se pasa el mouse */
-        color: #fff; /* Cambia el color del texto cuando se pasa el mouse */
-        border: inherit; /* Quitamos el efecto del border red */
-        transition: background-color 0.2s, color 0.2s; /* Agrega transiciones suaves */
+        background-color: #ff4848;
+        color: #fff;
+        /* Quitamos el efecto del border red */
+        border: inherit;
+        /* Agrega transiciones suaves */
+        transition: background-color 0.2s, color 0.2s;
+    }
+    /* Cuando el menú está abierto */
+    .menu.open {
+        opacity: 1;
+        transform: translateY(0);
+        /* Habilita eventos del mouse cuando está visible */
+        pointer-events: auto;
     }
 }
