@@ -25,8 +25,11 @@ cd React-Projects/01-TicTacToe
 ```bash
 npm install
 ```
-4. Ejecutar proyecto
+4. Build del proyecto
 ```bash
-npm run dev
+npm run build
 ```
-
+5. Iniciar proyecto
+```bash
+npm run start
+```
