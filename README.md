@@ -1,6 +1,9 @@
 # React & Next.js Projects
 Este repositorio contiene una colección de proyectos desarrollados con React y Next.js.
 
+- **[Vista previa del proyecto 06-Next.js](https://next-b4dudihpw-lucas-projects-ea437f93.vercel.app/)**
+
+
 Todos los proyectos en este repositorio se basan en el contenido de los siguientes cursos en YouTube:
 - **Curso React: [Midulive - Curso de React [2023]](https://www.youtube.com/watch?v=7iobxzd_2wY&list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29)**
 - **Curso Next.js: [Midulive - 📚 Curso de Next.js 13](https://www.youtube.com/watch?v=tA-_vAz9y78)**
@@ -11,7 +14,7 @@ Todos los proyectos en este repositorio se basan en el contenido de los siguient
 - **useReducer (manejo de estado más complejo)**
 - **useCallback (morizado de funciones)**
 - **useMemo(memorizado de estructura de datos)**
-
+  
 ## Cómo iniciar un proyecto
 1. Clonar este repositorio en tu computadora:
 ```bash
