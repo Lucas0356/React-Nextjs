@@ -1,5 +1,7 @@
 'use client'
 
+import React from 'react';
+
 // Importamos los hooks
 import { useState } from 'react'
 
@@ -12,7 +14,7 @@ import styles from '../styles/Post.module.css'
 // Importa la etiqueta Link de Next.js para la navegación
 import Link from 'next/link'
 
-export default function PostWithComments({ post, comments=null }) {
+export default function PostWithComments({ post, listOfComments=null }) {
     // Estado de los comentarios
     const [commentsVisibility, setCommentsVisibility] = useState(false)
 
@@ -34,7 +36,7 @@ export default function PostWithComments({ post, comments=null }) {
                 <LikeButton id={post.id} type="post" />
             </div>
         </article>
-        {comments}
+        {listOfComments && listOfComments}
         </>
     )
 }

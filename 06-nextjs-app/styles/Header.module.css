@@ -83,6 +83,11 @@
     width: 100%;
 }
 
+/* Media query para pantallas de escritorio (mayores a 768px) */
+@media (min-width: 769px) {
+
+}
+
 /* Media query para pantallas móviles (menores o iguales a 768px) */
 @media (max-width: 768px) {
     .menu-button {
