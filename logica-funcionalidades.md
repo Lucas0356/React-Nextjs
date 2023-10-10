@@ -67,6 +67,7 @@ export default function ListOfPosts() {
   );
 }
 ```
+<h2>APIS Y FETCH</h2>
 La mejor forma de hacer fetch de una API: (**importante ponerla como si fuera un servicio.**)
 
 ```javascript
@@ -101,8 +102,8 @@ export const searchPosts = async () => {
     }
 };
 ```
-Otro ejemplo de un fetch
-```javscript
+Otro ejemplo de un fetch: 
+```javascript
 export const GetGifs = async (category) => {
   const url = `api.giphy.com/v1/gifs/search?api_key=S0OH4a2MNzA8Us61z9sgOtDjJJldhuNX&q=${category}&limit=20`;
   const response = await fetch(url);
