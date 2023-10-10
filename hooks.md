@@ -227,6 +227,6 @@ export function usePosts() {
 ```
 ### UseCallback:
 
-fsdfsdfsdf
 
 - **[Video explicativo sobre useCallback](https://www.youtube.com/watch?v=duh3uKn0qnU)**
+- **[Video explicativo sobre useCallback 2](https://www.youtube.com/watch?v=dT3bC6M9G70)** 
