@@ -146,7 +146,7 @@ Si queremos utilizar el contexto en un archivo totalmente a parte, haciendo uso 
 
 - Finalmente, podemos hacer uso de los contextos con los componentes hijos de la siguiente manera:
 ```javascript
-import { useUserContext, useUserToggleContext } from "../UserProvider";
+import { useUserContext, useUserToggleContext } from "../provders/UserProvider";
 
 export default function Hijo () {
 
