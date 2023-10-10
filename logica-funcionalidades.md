@@ -1,4 +1,4 @@
-<h1 align="center"> Funciones o logica para reutilziar o darse una idea de como hacer cierta cosas </h1>
+<h1 align="center"> Funciones o logica para reutilizar o darse una idea de como hacer cierta cosas </h1>
 
 **Paginacion FACIL** con BOTON ANTERIOR/SIGUIENTE => https://www.youtube.com/watch?v=Q9jT1fZTV38
 
