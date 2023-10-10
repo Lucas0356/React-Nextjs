@@ -101,7 +101,24 @@ export const searchPosts = async () => {
     }
 };
 ```
+Otro ejemplo de un fetch
+```javscript
+export const GetGifs = async (category) => {
+  const url = `api.giphy.com/v1/gifs/search?api_key=S0OH4a2MNzA8Us61z9sgOtDjJJldhuNX&q=${category}&limit=20`;
+  const response = await fetch(url);
+  const { data } = await response.json();
 
+    const gifs = data.map(img=> {
+        return {
+            id: img.id,
+            title: img.title,
+            url: img.images.downsized_medium.url
+        }
+    });
+
+    return gifs;
+};
+```
 
 
 
