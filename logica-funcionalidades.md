@@ -68,7 +68,7 @@ export default function ListOfPosts() {
 }
 ```
 <h2>APIS Y FETCH</h2>
-La mejor forma de hacer fetch de una API: (**importante ponerla como si fuera un servicio.**)
+La mejor forma de hacer fetch de una API: **importante ponerla como si fuera un servicio**
 
 ```javascript
 // Importa el archivo JSON de mock de posts
