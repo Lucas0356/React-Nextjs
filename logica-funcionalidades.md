@@ -109,6 +109,7 @@ export const GetGifs = async (category) => {
   const response = await fetch(url);
   const { data } = await response.json();
 
+    //toma el array de data y devuelve otro array mapeado con todos los objetos adentro
     const gifs = data.map(img=> {
         return {
             id: img.id,
