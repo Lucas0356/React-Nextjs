@@ -225,8 +225,10 @@ export function usePosts() {
     return { posts }
 }
 ```
-### UseCallback:
+### UseCallback & useMemo:
 
+Sirven para memorizar diferentes funciones generadas en nuestros componentes, para que cuando el componente vuelva a renderizarse, esa función ya esté renderizada y no tenga que volver a ser creada. 
+Pudiendo mejorar el rendimiento de nuestra aplicación.
 
 - **[Video explicativo sobre useCallback](https://www.youtube.com/watch?v=duh3uKn0qnU)**
 - **[Video explicativo sobre useCallback 2](https://www.youtube.com/watch?v=dT3bC6M9G70)** 
