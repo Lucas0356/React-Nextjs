@@ -30,7 +30,7 @@ Sirve para pasar la información a través de distintos componentes y que a su v
 - **[Video explicativo sobre useContext:](https://www.youtube.com/watch?v=Ae33_gdJgnQ)**
 - **[GitHub con el código de ejemplo](https://github.com/GarajedeIdeas/CodePills-ReeactHooks-USECONTEXT)**
 
-Debemos importar la librería entera de Rect-
+Debemos importar la librería entera de React
 ```javascript
 import React from 'react';
 ```
