@@ -4,6 +4,8 @@
 * [Custom Hook](#custom-hook)
 
 * [UseContext](#usecontext)
+  
+* [UseState](#usestate)
 
 ### Custom Hook:
 Es una función de JavaScript, su nombre comienza con 'use' y **puede llamar a otros Hooks.**
@@ -161,3 +163,40 @@ export default function Hijo () {
     </div>
 }
 ```
+
+
+
+### UseState:
+
+El hook useState es utilizado para crear variables de estado, quiere decir que su valor es dinámico, que este puede cambiar en el tiempo y eso requiere una re-renderización del componente donde se utiliza
+
+Recibe un parámetro:
+
+    El valor inicial de nuestra variable de estado.
+
+Devuelve un array con dos variables:
+
+    En primer lugar tenemos la variable que contiene el valor
+    La siguiente variable es una función set, requiere el nuevo valor del estado, y este modifica el valor de la variable que anteriormente mencionamos
+    Cabe destacar que la función proporciona cómo parámetro el valor actual del propio estado. Ex: setIsOpen(isOpen => !isOpen)
+
+En este ejemplo mostramos como el valor de count se inicializa en 0, y también se renderiza cada vez que el valor es modificado con la función setCount en el evento onClick del button:
+
+```
+import { useState } from 'react'
+
+function Counter() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <p>Contador: {count}</p>
+      <button onClick={() => setCount(count => count + 1)}>Aumentar</button>
+    </>
+  )
+}
+
+```
+
+
+
