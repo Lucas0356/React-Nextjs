@@ -4,6 +4,7 @@ Este repositorio contiene una colección de proyectos desarrollados con React y 
 Todos los proyectos en este repositorio se basan en el contenido de los siguientes cursos en YouTube:
 - **Curso React: [Midulive - Curso de React [2023]](https://www.youtube.com/watch?v=7iobxzd_2wY&list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29)**
 - **Curso Next.js: [Midulive - 📚 Curso de Next.js 13](https://www.youtube.com/watch?v=tA-_vAz9y78)**
+  **OTRO CURSO COMPLETO Next.js: [Fazt Code - 📚 Curso de Nextjs desde Cero (Nextjs 13)](https://www.youtube.com/watch?v=_SPoSMmN3ZU)**
 
 ### Hooks que más vamos a utilizar:
 - **useEffect (es el que marca el ciclo de vida de un componente)**
