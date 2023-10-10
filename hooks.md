@@ -27,8 +27,8 @@ function useEjemplo(props) {
 
 Sirve para pasar la información a través de distintos componentes y que a su vez, tengan acceso a la información proporcionada del contexto desde cualquier punto. Es una buena práctica utilizarlo puesto que evita el propdrilling.
 
-- **Video explicativo sobre useContext: [useContext en 20 minutos](https://www.youtube.com/watch?v=Ae33_gdJgnQ)**
-- **GitHub con el código de ejemplo: [Repositorio](https://github.com/GarajedeIdeas/CodePills-ReeactHooks-USECONTEXT)**
+- **[Video explicativo sobre useContext:](https://www.youtube.com/watch?v=Ae33_gdJgnQ)**
+- **[GitHub con el código de ejemplo](https://github.com/GarajedeIdeas/CodePills-ReeactHooks-USECONTEXT)**
 
 Debemos importar la librería entera de Rect-
 ```javascript
