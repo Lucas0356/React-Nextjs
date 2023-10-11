@@ -7,6 +7,8 @@ Este repositorio contiene una colección de proyectos desarrollados con React y 
 - **OTRO CURSO COMPLETO Next.js: [Fazt Code - Curso de Nextjs desde Cero (Nextjs 13)](https://www.youtube.com/watch?v=_SPoSMmN3ZU)**
 - **Página con documentación de React: [React.dev](https://es.react.dev/learn)**
 
+- **PHP: [Curso Codeigniter 4](https://www.youtube.com/playlist?list=PL-Mlm_HYjCo9od4jKwVimQN7P3dK07xAb)**
+
 ### Hooks que más vamos a utilizar:
 - **useEffect (es el que marca el ciclo de vida de un componente)**
 - **useState (manejo de estado)**
