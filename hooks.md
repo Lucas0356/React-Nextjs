@@ -270,23 +270,23 @@ La ventaja es que si la prop count no cambia, se evita la creación de una nueva
 #### UseEffect:
 
 <h1>Hook useEffect</h1>
-**https://www.youtube.com/watch?v=_SPoSMmN3ZU**
+- **[Video explicativo sobre useEffect:](https://www.youtube.com/watch?v=_SPoSMmN3ZU)**
 
 El hook useEffect se usa para ejecutar un código cuando se renderiza el componente o cuando cambian las dependencias.
 
 Recibe dos parámetros:
 
-    Una función que se ejecutará cuando se renderice el componente(es decir en un principio) o cada vez que cambien las 'dependencias'.
-    Un array de dependencias []. Si cambia el valor de alguna dependencia, ejecutará la función nuevamente.
+    Una función que se ejecutará cuando se renderice el componente (es decir en un principio) o cada vez que cambien las 'dependencias'.
+    Un array de dependencias [ ]. Si cambia el valor de alguna dependencia, ejecutará la función nuevamente.
 
 **Ejemplo de la estructura**
 
 ```javascript
 useEffect(() => {
-  //funcion a ejecutar
+  // Función a ejecutar
 
   return () => {
-    //funcion cleanup
+    // Función cleanup
   }
 }, [/*dependencias*/])
 ```
@@ -301,7 +301,7 @@ function Counter() {
 
 //define el hook
   useEffect(() => {
-    //lo que se ejecuta cuadno cambie la dependencia o cuando se renderice el componente 
+    // Lo que se ejecuta cuadno cambie la dependencia o cuando se renderice el componente 
     console.log('El contador se ha actualizado')
   }, [count])
 
@@ -318,16 +318,16 @@ function Counter() {
 
 Podemos usar el hook useEffect de diferentes formas, tales como:
 
--Ejecutar código cuando se renderiza el componente, cuando cambian las dependencias del efecto o cuando se desmonta el componente.
--Util para hacer llamadas a APIs, ya que sea nada más montar el componente o cuando cambian las dependencias.
--Realizar tracking de eventos, como Google Analytics, para saber qué páginas visitan los usuarios.
--Podemos validar un formulario para que cada vez que cambie el estado, podamos actualizar la UI y mostrar dónde están los errores.
--Podemos suscribirnos a eventos del navegador, como por ejemplo el evento resize para saber cuando el usuario cambia el tamaño de la ventana.
+- Ejecutar código cuando se renderiza el componente, cuando cambian las dependencias del efecto o cuando se desmonta el componente.
+- Util para hacer llamadas a APIs, ya que sea nada más montar el componente o cuando cambian las dependencias.
+- Realizar tracking de eventos, como Google Analytics, para saber qué páginas visitan los usuarios.
+- Podemos validar un formulario para que cada vez que cambie el estado, podamos actualizar la UI y mostrar dónde están los errores.
+- Podemos suscribirnos a eventos del navegador, como por ejemplo el evento resize para saber cuando el usuario cambia el tamaño de la ventana.
 
 **Dependencias**
 Dependiendo si colocas o no dependencia, cambia la accion del useEffect
 
-	*[] vacio, se ejecuta **SOLO** una vez cuando se renderiza el componente al que pertenece.
+	*[ ] vacio, se ejecuta **SOLO** una vez cuando se renderiza el componente al que pertenece.
 	*[state/variable] se ejecuta una primera vez cuando se renderiza el componente y cada vez que cambia el estado de ese "state/variable".
 	*sin dependencias, es decir sin usar [], cada vez que se renderice el componente, se va a ejecutar la funcion del useEffect.
 
@@ -388,4 +388,71 @@ export default Example;
         updatePosts();
     },[user])
 
+```
+### UseReducer:
+
+Nos sirve para guardar estados, es una alternativa más compleja al useState. Nos permite tener distintas formas de modificar un estado
+
+- **[Video explicativo sobre useReducer:](https://www.youtube.com/watch?v=BACpj7GmiEo)**
+
+Importamos useReducer
+```javascript
+import { useReducer } from 'react'
+```
+
+Estructura general de un useReducer:
+Como parámetros recibe un estado (buena práctica ponerle siempre un valor inicial) y la acción que nosotros vayamos a enviar.
+Nos devuelve un array con 2 posiciones (al igual que el useState). En este caso, nos devuelve el estado y una función llamada 'dispatch', la cual sirve para poder enviar eventos, los cuales al pasar por el reducer, modifican el estado internamente. 
+
+```javascript
+const [state, dispatch] = useReducer((state = [], action) => {
+  // Lógica
+});
+```
+
+Ejemplo de llamado al useReducer con la acción 'add_task':
+(Este ejemplo es desde un evento de un formulario)
+
+```javascript
+const handleSubmit = (event) => {
+  event.preventDefault(); // Le dice al formulario html que no haga su función
+  // por defecto y que haga la siguiente: 
+  dispatch({
+    type: 'add_task',
+    title: inputRef.current.value
+  })
+}
+```
+
+Utilizamos el condicional switch para diferenciar los diferentes tipos de acciones que nos lleguen al useReducer. También es interesante implementar el caso default por si nos llega una acción que no tenemos controlada, en ese caso simplemente retornamos el estado. 
+
+```javascript
+const [state, dispatch] = useReducer((state = [], action) => {
+    switch (action.type) {
+      case 'add_task': {
+        // Lógica 
+      }
+      default: {
+        return state;
+      }
+    }
+});
+```
+
+Para evitar problemas y tener el estado más controlado, Es importante que el useReducer siempre devuelva un nuevo objeto que represente el nuevo estado.
+
+```javascript
+const [state, dispatch] = useReducer((state = [], action) => {
+    switch (action.type) {
+      case 'add_task': {
+        return [ // Retornamos nuevo array
+          ...state, // Recuperamos los valores del estado anterior (spread operator)
+          { id: generarId(), title: action.title} // Nuevo valor
+        ]
+      }
+      default: {
+        return state;
+      }
+    }
+});
 ```
