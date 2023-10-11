@@ -169,9 +169,6 @@ export const PostCard = ({post}) => {
 ```
 
 
-
-
-```
 Ejemplo de fetchear API usando **'then'**:
 ```javascript
 import { useEffect, useState } from 'react'
