@@ -7,6 +7,8 @@
   
 * [UseState](#usestate)
 
+* [UseCallback & UseMemo](#usecallback--usememo)
+
 ### Custom Hook:
 Es una función de JavaScript, su nombre comienza con 'use' y **puede llamar a otros Hooks.**
 
