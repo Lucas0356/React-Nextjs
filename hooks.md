@@ -276,8 +276,8 @@ El hook useEffect se usa para ejecutar un código cuando se renderiza el compone
 
 Recibe dos parámetros:
 
-    Una función que se ejecutará cuando se renderice el componente (es decir en un principio) o cada vez que cambien las 'dependencias'.
-    Un array de dependencias [ ]. Si cambia el valor de alguna dependencia, ejecutará la función nuevamente.
+- Una función que se ejecutará cuando se renderice el componente (es decir en un principio) o cada vez que cambien las 'dependencias'.
+- Un array de dependencias [ ]. Si cambia el valor de alguna dependencia, ejecutará la función nuevamente.
 
 **Ejemplo de la estructura**
 
