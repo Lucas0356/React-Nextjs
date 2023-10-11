@@ -115,7 +115,7 @@ export function UserProvider({ children }) {
 }
 ```
 
-- Dentro de App.jsx, utilizamos este proveedor:
+Dentro de App.jsx, utilizamos este proveedor:
   ```javascript
 	import React from 'react';
 	import './App.css';
@@ -135,7 +135,7 @@ export function UserProvider({ children }) {
 	export default App;
 	```
 
-- Finalmente, en los componentes hijos, accedemos a los contextos usando los custom hooks:
+Finalmente, en los componentes hijos, accedemos a los contextos usando los custom hooks:
 ```javascript
 import { useUserContext, useUserToggleContext } from "../provders/UserProvider";
 
@@ -214,8 +214,50 @@ export function usePosts() {
 ```
 ### UseCallback & useMemo:
 
-Sirven para memorizar diferentes funciones generadas en nuestros componentes, para que cuando el componente vuelva a renderizarse, esa función ya esté renderizada y no tenga que volver a ser creada. 
-Pudiendo mejorar el rendimiento de nuestra aplicación.
+Sirven para memorizar diferentes funciones generadas en nuestros componentes, para que cuando el componente vuelva a renderizarse, esa función ya esté renderizada y no tenga que volver a ser creada. Pudiendo mejorar el rendimiento de nuestra aplicación.
 
 - **[Video explicativo sobre useCallback](https://www.youtube.com/watch?v=duh3uKn0qnU)**
 - **[Video explicativo sobre useCallback 2](https://www.youtube.com/watch?v=dT3bC6M9G70)** 
+
+Implementación Básica:
+Primero, importamos el hook que vayamos a utilizar :
+```javascript
+import { useCallback, useMemo } from "react"
+```
+
+La sintaxis de ambos hooks es la misma:
+```javascript
+const callback = useCallback(parametro1, parametro2)
+const memo = useMemo(parametro1, parametro2)
+```
+Parametro 1: La función que queremos guardar igual entre diferentes renderizados
+
+Parametro 2: [ ] Array de dependencias (Al igual que en useEffect)
+```javascript
+const callback = useCallback(doble, [])
+const memo = useMemo(doble, [])
+```
+
+¿Qué guarda cada una?
+- Callback te devuelve exactamente la función, por lo que se puede llamar a la misma:
+```javascript
+console.log(callback)
+> function doble()
+console.log(callback())
+> 2
+```
+- Memo no devuelve la función memorizada, sino que la ejecuta y devuelve el valor memorizado, por lo que no puede ejecutarse:
+```javascript
+console.log(memo)
+> 2
+console.log(memo())
+> Error
+```
+
+La función se ejecuta cuando el componente se renderiza por primera vez y cuando alguna de las dependencias cambia. En este ejemplo ambas dependen de cont, es decir, al cambiar de valor cont, se van a volver a memorizar con los valores actualizados:
+```javascript
+const callback = useCallback(doble, [cont])
+const memo = useMemo(doble, [cont])
+```
+
+La ventaja es que si la prop count no cambia, se evita la creación de una nueva función y se devuelve la función que ya se había calculado previamente.
