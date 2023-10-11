@@ -10,8 +10,10 @@
 * [UseCallback & UseMemo](#usecallback--usememo)
 
 * [UseEffect](#useeffect)
+  
+* [useReducer](#usereducer)
 
-#### <h1>Custom Hook</h1>:
+#### <h1>Custom Hook:</h1>
 Es una función de JavaScript, su nombre comienza con 'use' y **puede llamar a otros Hooks.**
 
 Estructura de un Custom Hook:
@@ -29,7 +31,7 @@ function useEjemplo(props) {
 }
 ```
 
-#### <h1>UseContext</h1>:
+#### <h1>UseContext:</h1>
 
 Es una herramienta que facilita la transferencia de información entre diferentes componentes, permitiendo un acceso sencillo a los datos proporcionados por el contexto desde cualquier punto de la aplicación. Su utilización es una práctica recomendada ya que elimina la necesidad del "prop drilling" o pasar datos a través de múltiples componentes intermedios.
 
@@ -157,7 +159,7 @@ export default function Hijo () {
 }
 ```
 
-#### <h1>UseState</h1>:
+#### <h1>UseState:</h1>
 
 El hook useState es utilizado para crear variables de estado, quiere decir que su valor es dinámico, que este puede cambiar en el tiempo y eso requiere una re-renderización del componente donde se utiliza
 
@@ -216,7 +218,7 @@ export function usePosts() {
     return { posts }
 }
 ```
-### <h1>UseCallback & useMemo</h1>:
+### <h1>UseCallback & useMemo:</h1>
 
 Sirven para memorizar diferentes funciones generadas en nuestros componentes, para que cuando el componente vuelva a renderizarse, esa función ya esté renderizada y no tenga que volver a ser creada. Pudiendo mejorar el rendimiento de nuestra aplicación.
 
@@ -266,7 +268,7 @@ const memo = useMemo(doble, [cont])
 
 La ventaja es que si la prop count no cambia, se evita la creación de una nueva función y se devuelve la función que ya se había calculado previamente.
 
-#### <h1>useEffect</h1>
+#### <h1>useEffect:</h1>
 
 - **[Video explicativo sobre useEffect](https://www.youtube.com/watch?v=_SPoSMmN3ZU)** 
 
