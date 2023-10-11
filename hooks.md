@@ -13,6 +13,8 @@
   
 * [useReducer](#usereducer)
 
+* [useId](#useid)
+
 #### <h1>Custom Hook:</h1>
 Es una función de JavaScript, su nombre comienza con 'use' y **puede llamar a otros Hooks.**
 
@@ -456,3 +458,18 @@ const [state, dispatch] = useReducer((state = [], action) => {
     }
 });
 ```
+
+#### <h1>UseId:</h1>
+
+Este Hook tiene la funcionalidad de generar un identificador único que simpre va a ser el mismo y que funciona con 'server as rendering'. Nos puede ayudar a evitar errores al ingresar nosotros mismos un identificador manualmente.
+
+Importamos useId
+```javascript
+import { useId } from 'react'
+```
+
+Ejemplo para generar un identificador único con useId para categoryFilterId
+```javascript
+const categoryFilterId = useId();
+```
+
