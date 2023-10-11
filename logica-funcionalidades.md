@@ -120,6 +120,57 @@ export const GetGifs = async (category) => {
 
     return gifs;
 };
+
+Mas ejemplo de fetch de datos
+
+```javascript
+import { PostCard } from "../components/PostCard";
+
+//funcion para hacer fetch
+const loadPosts = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await response.json();
+  return data;
+};
+
+//component que renderiza
+export default async function PostPages() {
+  const posts = await loadPosts();
+  console.log(posts);
+
+  return (
+    <div>
+      {posts.map((post) => (
+        <PostCard post={post} key={post.id}/>
+      ))}
+    </div>
+  );
+}
+
+```
+Aca esta el component PostCard que usa un 'use client' para que sear react client component
+
+```javascript
+'use client'
+
+export const PostCard = ({post}) => {
+  return (
+    <div>
+      <h3>
+        {post.id}. {post.title}
+      </h3>
+      <p>{post.body}</p>
+      <button onClick={ ()=> {
+        alert("click");
+      }}>click</button>
+    </div>
+  );
+};
+```
+
+
+
+
 ```
 Ejemplo de fetchear API usando **'then'**:
 ```javascript
