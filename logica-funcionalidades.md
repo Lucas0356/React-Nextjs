@@ -120,6 +120,7 @@ export const GetGifs = async (category) => {
 
     return gifs;
 };
+```
 
 Mas ejemplo de fetch de datos
 
