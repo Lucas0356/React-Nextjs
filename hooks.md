@@ -9,6 +9,8 @@
 
 * [UseCallback & UseMemo](#usecallback--usememo)
 
+* [UseEffect](#useeffect)
+
 ### Custom Hook:
 Es una función de JavaScript, su nombre comienza con 'use' y **puede llamar a otros Hooks.**
 
@@ -265,6 +267,7 @@ const memo = useMemo(doble, [cont])
 La ventaja es que si la prop count no cambia, se evita la creación de una nueva función y se devuelve la función que ya se había calculado previamente.
 
 
+#### UseEffect:
 
 <h1>Hook useEffect</h1>
 **https://www.youtube.com/watch?v=_SPoSMmN3ZU**
@@ -324,9 +327,9 @@ Podemos usar el hook useEffect de diferentes formas, tales como:
 **Dependencias**
 Dependiendo si colocas o no dependencia, cambia la accion del useEffect
 
--[] vacio, se ejecuta **SOLO** una vez cuando se renderiza el componente al que pertenece.
--[state/variable] se ejecuta una primera vez cuando se renderiza el componente y cada vez que cambia el estado de ese "state/variable".
--sin dependencias, es decir sin usar [], cada vez que se renderice el componente, se va a ejecutar la funcion del useEffect.
+	*[] vacio, se ejecuta **SOLO** una vez cuando se renderiza el componente al que pertenece.
+	*[state/variable] se ejecuta una primera vez cuando se renderiza el componente y cada vez que cambia el estado de ese "state/variable".
+	*sin dependencias, es decir sin usar [], cada vez que se renderice el componente, se va a ejecutar la funcion del useEffect.
 
 **Funcion cleanup**
 Es una funcion que se ejecuta dentro del hook useEffect y sirve para limpiar algun script.
