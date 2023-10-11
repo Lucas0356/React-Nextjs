@@ -263,3 +263,126 @@ const memo = useMemo(doble, [cont])
 ```
 
 La ventaja es que si la prop count no cambia, se evita la creación de una nueva función y se devuelve la función que ya se había calculado previamente.
+
+
+
+<h1>Hook useEffect</h1>
+**https://www.youtube.com/watch?v=_SPoSMmN3ZU**
+
+El hook useEffect se usa para ejecutar un código cuando se renderiza el componente o cuando cambian las dependencias.
+
+Recibe dos parámetros:
+
+    Una función que se ejecutará cuando se renderice el componente(es decir en un principio) o cada vez que cambien las 'dependencias'.
+    Un array de dependencias []. Si cambia el valor de alguna dependencia, ejecutará la función nuevamente.
+
+**Ejemplo de la estructura**
+
+```javascript
+useEffect(() => {
+  //funcion a ejecutar
+
+  return () => {
+    //funcion cleanup
+  }
+}, [/*dependencias*/])
+```
+
+Un ejemplo: mostramos un mensaje en consola cuando carga el componente y cada vez que cambia el valor de count:
+
+```javascript
+import { useEffect, useState } from 'react'
+
+function Counter() {
+  const [count, setCount] = useState(0)
+
+//define el hook
+  useEffect(() => {
+    //lo que se ejecuta cuadno cambie la dependencia o cuando se renderice el componente 
+    console.log('El contador se ha actualizado')
+  }, [count])
+
+  return (
+    <>
+      <p>Contador: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Aumentar</button>
+    </>
+  )
+}
+```
+
+**Casos de uso del hook useEffect**
+
+Podemos usar el hook useEffect de diferentes formas, tales como:
+
+-Ejecutar código cuando se renderiza el componente, cuando cambian las dependencias del efecto o cuando se desmonta el componente.
+-Util para hacer llamadas a APIs, ya que sea nada más montar el componente o cuando cambian las dependencias.
+-Realizar tracking de eventos, como Google Analytics, para saber qué páginas visitan los usuarios.
+-Podemos validar un formulario para que cada vez que cambie el estado, podamos actualizar la UI y mostrar dónde están los errores.
+-Podemos suscribirnos a eventos del navegador, como por ejemplo el evento resize para saber cuando el usuario cambia el tamaño de la ventana.
+
+**Dependencias**
+Dependiendo si colocas o no dependencia, cambia la accion del useEffect
+
+-[] vacio, se ejecuta **SOLO** una vez cuando se renderiza el componente al que pertenece.
+-[state/variable] se ejecuta una primera vez cuando se renderiza el componente y cada vez que cambia el estado de ese "state/variable".
+-sin dependencias, es decir sin usar [], cada vez que se renderice el componente, se va a ejecutar la funcion del useEffect.
+
+**Funcion cleanup**
+Es una funcion que se ejecuta dentro del hook useEffect y sirve para limpiar algun script.
+
+Ejemplo:
+
+```javascript
+function Example(){
+    const [count, setCount] = useState(0);
+
+    useEffect(()=>{
+        //funcion que se dispara al renderizar
+        console.log("funcion del efecto");
+
+        const intervalId = setInterval (()=>{
+            setCount(count+1);
+        }, 1000);
+
+        //funcion cleanup
+        return () => {
+            console.log("funcion cleanup");
+            clearInterval(intervalId);
+        }
+    }, [count]);
+
+    return <div>{count}</div>
+
+}
+
+export default Example;
+
+```
+
+
+**EJEMPLO MAS COMUN DE USO DE USEFFECT**
+```javascript
+
+    //defino mi fetch
+    const getPost = async (userId) => {
+        const url = '';
+        const res = await fetch(url);
+        const posts = await res.json();
+        return posts;
+    }
+
+    //defino una funcion con mi fetch invocado adentro
+    const updatePosts = () => {
+        getPosts()
+            .then((newPosts) => {
+                setsPosts(newPosts);
+            })
+    }
+
+    //genero el useEffect que me ejecuta una funcion dependiendo del user
+    useEffect(( ) => {
+        updatePosts();
+    },[user])
+
+```
