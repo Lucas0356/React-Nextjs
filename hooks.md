@@ -329,9 +329,9 @@ Podemos usar el hook useEffect de diferentes formas, tales como:
 **Dependencias**
 Dependiendo si colocas o no dependencia, cambia la accion del useEffect
 
-	*[ ] vacio, se ejecuta **SOLO** una vez cuando se renderiza el componente al que pertenece.
-	*[state/variable] se ejecuta una primera vez cuando se renderiza el componente y cada vez que cambia el estado de ese "state/variable".
-	*sin dependencias, es decir sin usar [], cada vez que se renderice el componente, se va a ejecutar la funcion del useEffect.
+- [ ] vacio, se ejecuta **SOLO** una vez cuando se renderiza el componente al que pertenece.
+- [state/variable] se ejecuta una primera vez cuando se renderiza el componente y cada vez que cambia el estado de ese "state/variable".
+- [ ] *sin dependencias, es decir sin usar [], cada vez que se renderice el componente, se va a ejecutar la funcion del useEffect.
 
 **Funcion cleanup**
 Es una funcion que se ejecuta dentro del hook useEffect y sirve para limpiar algun script.
