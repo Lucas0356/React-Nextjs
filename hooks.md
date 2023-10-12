@@ -15,6 +15,8 @@
 
 * [useId](#useid)
 
+* [useRef](#useref)
+
 #### <h1>Custom Hook:</h1>
 Es una función de JavaScript, su nombre comienza con 'use' y **puede llamar a otros Hooks.**
 
@@ -473,3 +475,4 @@ Ejemplo para generar un identificador único con useId para categoryFilterId
 const categoryFilterId = useId();
 ```
 
+### <h1>useRef</h1>
