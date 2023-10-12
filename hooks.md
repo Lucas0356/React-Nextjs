@@ -476,3 +476,93 @@ const categoryFilterId = useId();
 ```
 
 ### <h1>useRef</h1>
+
+El hook useRef nos permite mantener una referencia, y cuando esa referencia cambia, no renderiza ese componente. Sirve para dos propósitos principales: almacenar valores mutables que no provocan una nueva renderización cuando se actualizan (como mencione antes) y almacenar referencias a elementos del DOM.
+
+Cuando un componente se renderiza en React, normalmente se restablecen su estado y otras variables. Sin embargo, hay casos en los que necesitas conservar ciertos valores incluso cuando el componente se vuelve a renderizar. Aquí es donde entra en juego el Hook useRef.
+
+Para empezar a utilizar el Hook useRef en tu proyecto React, impórtalo del paquete React:
+
+```javascript
+import { useRef } from 'react';
+```
+
+vez importado, puedes declarar una variable ref dentro de tu componente funcional utilizando el Hook useRef:
+
+```javascript
+const myRef = useRef();
+```
+
+
+Ahora tienes un objeto ref, miRef, que puedes utilizar para almacenar valores y acceder a ellos. Para utilizar la variable myRef con cualquier elemento, asígnala a la prop ref del elemento.
+
+```javascript
+<div ref={myRef}>This is an example element</div>
+```
+
+En el ejemplo anterior, asignas al elemento div una prop ref. Esto te permite hacer referencia al elemento y acceder a él utilizando la variable myRef en cualquier otra parte del componente.
+
+Para acceder al valor almacenado en la referencia creada, puedes utilizar la propiedad .current del objeto myRef.
+
+```javascript
+const myRefValue = myRef.current;
+console.log(myRefValue); // <div>This is a sample div</div>
+```
+
+Ejemplo de uso de useRef:
+
+```javascript
+import { useRef } from 'react';
+
+const FocusComponent = () => {
+  const inputRef = useRef(null);
+
+  const handleFocus = () => {
+    // accessing the input element
+    let inputElement = inputRef.current;
+
+   // modify the DOM element
+   inputElement.focus();
+  };
+ 
+ return (
+    <div>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleFocus}>Focus Input</button>
+    </div>
+  );
+}
+```
+
+En este ejemplo, el Hook useRef se utiliza para crear una referencia inputRef que apunta al elemento input. Cuando se pulsa el botón «Focus Input», la función handleFocus utiliza inputRef.current.focus() para establecer directamente el enfoque en el elemento de entrada. Esto demuestra cómo el Hook useRef simplifica el proceso de trabajar con elementos DOM en React.
+
+--------------------------------------------------
+
+Otro ejemplo es que quieras manipular un div cambiando su fondo cuando se pulsa un botón:
+
+```javascript
+import { useRef } from 'react';
+
+const ExampleComponent = () => {
+  const divRef = useRef();
+
+  const handleClick = () => {
+    divRef.current.style.backgroundColor = 'red';
+  };
+
+  return (
+    <div>
+      <div ref={divRef}>This is a sample div</div>
+      <button onClick={handleClick}>Change Color</button>
+    </div>
+  );
+}
+```
+
+Creas una referencia con el Hook useRef llamada divRef. Asignas esta referencia a la proposición ref del elemento div.
+
+Cuando se pulsa el botón «Change Color», se invoca la función handleClick. En la función, puedes acceder al elemento div con divRef.current. En este caso, modificas el color de fondo del elemento div actualizando su propiedad style.backgroundColor a «rojo».
+
+```javascript
+divRef.current.style.backgroundColor = 'red';
+```
