@@ -476,6 +476,8 @@ const categoryFilterId = useId();
 ```
 
 ### <h1>useRef</h1>
+https://www.youtube.com/watch?v=4RGObDegoXw
+https://www.youtube.com/watch?v=raJjjm3rhhU
 
 El hook useRef nos permite mantener una referencia, y cuando esa referencia cambia, no renderiza ese componente. Sirve para dos propósitos principales: almacenar valores mutables que no provocan una nueva renderización cuando se actualizan (como mencione antes) y almacenar referencias a elementos del DOM.
 
