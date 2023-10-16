@@ -1,11 +1,10 @@
-import SinglePost from '@/components/SinglePost'
+import PostById from '@/components/PostById'
 
 export default function Post ({ children, params }) {
   const { id } = params
   return (
     <>
-      <SinglePost id={id} />
-      {children}
+      <PostById id={id} listOfComments={children} />
     </>
   )
 }

@@ -1,51 +1,64 @@
-// Importa el archivo JSON de mock de posts
-import posts from '../app/mocks/posts.json'
+"use client";
+// Importa los estilos
+import styles from "../styles/ListOfPosts.module.css";
 
-// Importa los estilos del componente
-import './ListOfPosts.css'
+// Importa el componente post
+import Post from "./Post";
 
-// Importa la etiqueta Image de Next.js para mostrar imágenes
-import Image from 'next/image'
+// Importa el custom hook con la lógica
+import { usePosts } from "../hooks/usePosts";
+import { useState } from "react";
 
-// Importa el componente LikeButton
-import { LikeButton } from '../components/LikeButton'
+export default function ListOfPosts() {
+  // Llamamos a nuestro custom hook
+  const { posts } = usePosts();
+  const [currentPage, setCurrentPage] = useState(0);
 
-// Importa la etiqueta Link de Next.js para la navegación
-import Link from 'next/link'
+  const jumpPage = 8;
 
-export default function ListOfPosts () {
-  // Comprueba si hay posts en el mock de datos
-  const hasPosts = posts?.length > 0
+  const filterPost = () => {
+    return posts.slice(currentPage, currentPage + jumpPage);
+  };
+
+  const nextPage = () => {
+    // console.log(currentPage);
+    setCurrentPage(currentPage + jumpPage);
+  };
+
+  const previousPage = () => {
+    // console.log(currentPage);
+    if (currentPage > 0) {
+      setCurrentPage(currentPage - jumpPage);
+    }
+  };
+
+  //devuelve true o false si la pagina actual es mayor a 0
+  const canShowPrevious = currentPage > 0;
+
+  //devuelve true o false si la pagina actual más 8 es menor a la longitud de los posts (son 100)
+  const canShowNext = currentPage + jumpPage < posts.length; 
+
+  console.log(posts)
 
   return (
-    <div className='posts-container'>
-      {hasPosts
-        ? (
-          // Mapea y muestra los primeros 10 posts si existen
-            posts.slice(0, 8).map((post) => (
-              <article className='post' key={post.id}>
-                <Link className='link' href='/posts/[id]' as={`/posts/${post.id}`}>
-                  <h3 className='title'>{post.title}</h3>
-                  <p>{post.body}</p>
-                </Link>
-                <div className='like-button-container'>
-                  <LikeButton />
-                </div>
-              </article>
-            ))
-          )
-        : (
-          // Muestra un mensaje si no se encuentran posts
-          <article>
-            <p>No se han encontrados posts</p>
-            <Image
-              src='https://http.cat/images/404.jpg'
-              alt='error 404 not found image cat'
-              width={300}
-              height={200}
-            />
-          </article>
-          )}
-    </div>
-  )
+    <>
+      <div className={styles["posts-container"]}>
+        {
+          /* Mapea y muestra los primeros 8 posts  */
+          filterPost().map((post) => (
+            <Post post={post} key={post.id} />
+          ))
+        }
+      </div>
+      <div className={styles.btnContainer}>
+      {/* utilizamos la propiedad disabled de los botones para deshabilitarlos cuando estas variables sean false. De esta manera, los botones solo estarán habilitados cuando sea posible navegar entre las páginas de posts. */}
+        <button className={styles.btnPag} onClick={previousPage} disabled={!canShowPrevious}>
+          Anterior
+        </button>
+        <button className={styles.btnPag} onClick={nextPage} disabled={!canShowNext}>
+          Siguiente
+        </button>
+      </div>
+    </>
+  );
 }

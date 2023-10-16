@@ -1,0 +1,22 @@
+.footer {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    text-align: left;
+    background: #020202f3;
+    padding: 8px 20px;
+    border-radius: 32px;
+    opacity: .95;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    color: #fff;
+}
+
+.span {
+    color: #ff4848;
+    margin-right: 5px;
+}

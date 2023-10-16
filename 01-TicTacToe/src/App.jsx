@@ -52,9 +52,9 @@ function App() {
 
     // Revisamos si hay un ganador luego de cada turno
     const newWinner = checkWinnerFrom(newBoard)
-    if (newWinner) {
-      // Si checkWinner nos devuelve un valor, nos fijamos si es distinto de empate 
-      // para tirar confetti 
+    console.log(newWinner)
+    if (newWinner != GAME_STATE.Sin_ganador) {
+      // Si checkWinner es distinto a Sin_ganador, nos fijamos que no sea empate para tirar confetti
       if (newWinner != GAME_STATE.Empate){
         confetti()
       }

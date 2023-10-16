@@ -1,0 +1,77 @@
+/* Estilos para el contenedor de comentarios*/
+.comments-container{
+    border: 2px solid #ccc;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr); /* Esto garantiza un solo elemento */
+    width: 100%;
+    max-width: 800px; /* Límite de ancho máximo */
+}
+
+/* Estilos para el header del contenedor de comentarios */
+.comments-container-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    background-color: #000;
+}
+
+/* Estilos para el título del header del contenedor de comentarios */
+.comments-container-header h3{
+    color: #fff;
+}
+
+/* Estilos para cada comentario */
+.comment {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* Estilos para la info de usuario del autor de cada comentario */
+.comment .user-info-content {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 10px;
+}
+
+/* Estilos para la foto de cada usuario */
+.comment .user-info-content img {
+    border-radius: 50%;
+    background-color: #e4e4e4;
+}
+
+/* Estilos para el email del comentario */
+.comment .email{
+    font-size: 1rem;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos (...) al final del texto desbordado */
+}
+
+/* Estilos para título del comentario */
+.comment-title{
+    font-size: 1rem;
+}
+
+/* Contenedor del botón "Me gusta" */
+.like-button-container {
+    padding-top: 10px;
+    margin-top: auto; /* Empuja el botón hacia la parte inferior */
+    align-self: flex-end; /* Alinea el botón al final del artículo, es decir, a la derecha */
+}
+
+/* Separador de comentarios */
+.comment-separator{
+    margin-top: 10px;
+}
+
+/* Media query para pantallas móviles muy pequeñas (menores o iguales a 300) */
+@media (max-width: 300px) {
+    /* Estilos para cada comentario */
+    .comment {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,25 @@
+/* Estilos para el contenedor del post */
+.post-container{
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px; /* Límite de ancho máximo */
+}
+
+/* Media query para pantallas móviles (menores o iguales a 768px) */
+@media (max-width: 768px) {
+    /* Estilos para el contenedor del post */
+    .post-container {
+        margin: 0 5%;
+    }
+}
+
+/* Media query para pantallas móviles muy pequeñas (menores o iguales a 300) */
+@media (max-width: 300px) {
+    /* Estilos compartidos para contenedores de posts */
+    .post-container {
+        margin: 0 1%;
+    }
+}
