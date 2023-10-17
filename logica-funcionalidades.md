@@ -197,7 +197,7 @@ export function useCatImage ({ fact }) {
 }
 ```
 
-Ejemplo de uso de eventos: **onChange**:
+Ejemplo de uso de evento: **onChange** para tomar valor del input:
 
 ```javascript
 const [name, setName] = useState('');
