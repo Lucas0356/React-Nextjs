@@ -62,4 +62,10 @@ Salir del docker
 exit
 ```
 
+Bajar el proyecto de codeigniter
+```
+[~/proyectos/scm/backend/src]
+[SYS]🥊frios >  composer install --no-dev --ignore-platform-reqs
+```
+
 
