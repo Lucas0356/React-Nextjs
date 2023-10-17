@@ -109,5 +109,9 @@ Levantar server de php/codeigniter
 ```
 php -S <mi_ip>:8080 -t .
 ```
+Dar permisos de escritura a la carpeta
+```
+chmod -R 777 writable
+```
 
 
