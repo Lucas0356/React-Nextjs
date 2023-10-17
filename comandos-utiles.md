@@ -91,3 +91,11 @@ vi  nombrearchivo
 :x = guardar los cambios
 :q = salir sin guardar
 
+
+
+Levantar server de php/codeigniter
+```
+php -S <mi_ip>:8080 -t .
+```
+
+
