@@ -84,7 +84,7 @@ cat archivo.txt
 
 **Sobreescribir un archivo**
 
-*utilizar flechitas para moverse entre las lineas del archivo*
+*utilizar flechitas para moverse entre las lineas del archivo.*
 *escribir 'dd' sobre una linea de archivo para borrarlo.*
 
 
