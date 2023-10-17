@@ -82,11 +82,16 @@ cat archivo.txt
 
 <h2>VI</h2>
 
-Sobreescribir un archivo
+**Sobreescribir un archivo**
+
+*utilizar flechitas para moverse entre las lineas del archivo*
+*escribir 'dd' sobre una linea de archivo para borrarlo.*
+
 
 ```bash
 vi  nombrearchivo
 ```
+*una vez que termines, apretar la tecla escape y luego los siguientes comandos:*
 
 :x = guardar los cambios
 :q = salir sin guardar
