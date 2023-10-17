@@ -21,5 +21,5 @@ sudo yum install 'nombrepaqueteainstalar'
 *para filtrar entre toda la lista por algun nombre en particular* (entre asterisco)
 
 ```
-sudo yum install *palabra a filtrar*
+sudo yum list *palabra a filtrar*
 ```
