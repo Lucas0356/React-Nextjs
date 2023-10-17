@@ -197,5 +197,31 @@ export function useCatImage ({ fact }) {
 }
 ```
 
+Ejemplo de uso de eventos: **onChange**:
+
+```javascript
+const [name, setName] = useState('');
+
+
+const handleNameChange = (event) => {
+  //accede al value que se pone en el input
+  const name = event.target.value
+}
+
+return (
+  <div>
+    <h1>Nuevo Producto</h1>
+    <form>
+      <input
+        onChange={handleNameChange}
+        type='text'
+        name='name'
+        placeholder='nombre del producto..'
+      />
+  </div>
+)
+
+```
+
 
 
