@@ -29,3 +29,37 @@ Clonar un proyecto (ejemplo)
 ```
 git clone 'git@gitlab.cooperativaobrera.coop:logistica/scm/backend.git'
 ```
+
+Cambiar de rama:
+
+```
+git checkout devel
+```
+
+Levantar docker
+```
+sudo docker compose up -d
+```
+
+Acceder al docker
+```
+sudo docker ps -a
+sudo docksh docker-scm-1
+```
+
+Ya dentro del docker te aparece asi
+
+```
+[/var/www/html] [docker] scm #
+//comprobar la version de php
+[/var/www/html] [docker] scm # php -v
+
+```
+
+Salir del docker
+
+```
+exit
+```
+
+
