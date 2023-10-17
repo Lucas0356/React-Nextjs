@@ -1,10 +1,10 @@
-//Para copiar archivos origen@destino:/ruta..
+Para copiar archivos origen@destino:/ruta..
 
 ```
 scp mydev.ini lmoltedo@frios:/etc/sistemas/db
 ```
 
-//para mostrar todos los paquetes o instalaciones necesarias
+Para mostrar todos los paquetes o instalaciones necesarias
 
 ```
 sudo yum list
@@ -68,4 +68,26 @@ Bajar el proyecto de codeigniter
 [SYS]🥊frios >  composer install --no-dev --ignore-platform-reqs
 ```
 
+Comando CAT
+
+Cat es la abreviatura de concatenar. Esto se refiere al hecho de que cat puede ser utilizado para combinar múltiples archivos en un archivo, también se puede utilizar para crear nuevos archivos y para mostrar el contenido de los archivos existentes. 
+
+cat se utiliza a menudo como una forma sencilla de **ver el contenido de un archivo de texto**.
+```bash
+cat archivo.txt
+> Hola! Este es el contenido del archivo de texto :)
+```
+
+<hr></hr>
+
+<h2>VI</h2>
+
+Sobreescribir un archivo
+
+```bash
+vi  nombrearchivo
+```
+
+:x = guardar los cambios
+:q = salir sin guardar
 
