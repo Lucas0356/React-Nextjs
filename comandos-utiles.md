@@ -40,6 +40,12 @@ Levantar docker
 ```
 sudo docker compose up -d
 ```
+**PD:el -d es para que corra en segundo plano como si fuera un demonio**. 
+
+Dar de baja al docker
+```
+sudo docker compose down
+```
 
 Acceder al docker
 ```
