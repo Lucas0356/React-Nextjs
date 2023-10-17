@@ -23,3 +23,9 @@ sudo yum install 'nombrepaqueteainstalar'
 ```
 sudo yum list *palabra a filtrar*
 ```
+
+Clonar un proyecto (ejemplo)
+
+```
+git clone 'git@gitlab.cooperativaobrera.coop:logistica/scm/backend.git'
+```
