@@ -4,7 +4,7 @@
 <h2>Activar modo de desarrollo</h2>
 
 <details>
-<summary>Ver contenido</summary>
+<summary><strong>Ver contenido</strong></summary>
 <br>
 
 De forma predeterminada, Codeigniter inicia con el **modo de producción**, si queremos cambiar al **modo de desarrollo**, debemos hacer lo siguiente:
@@ -21,7 +21,7 @@ De forma predeterminada, Codeigniter inicia con el **modo de producción**, si q
 <h2>Controller</h2>
 
 <details>
-<summary>Ver contenido</summary>
+<summary><strong>Ver contenido</strong></summary>
 <br>
 
 The first thing you’re going to do is set up a controller to handle static pages. A controller is simply a class that helps delegate work. It is the glue of your web application.
@@ -113,7 +113,7 @@ class Pages extends BaseController
 <h2>Views</h2>
 
 <details>
-<summary>Ver contenido</summary>
+<summary><strong>Ver contenido</strong></summary>
 <br>
 
 Earlier you set up a controller with a view() method. The method accepts one parameter, which is the name of the page to be loaded.
@@ -147,7 +147,7 @@ Earlier you set up a controller with a view() method. The method accepts one par
 <h2>Rutas</h2>
 
 <details>
-<summary>Ver contenido</summary>
+<summary><strong>Ver contenido</strong></summary>
 <br>
 
 Las rutas se colocan en el archivo routes.php
@@ -189,7 +189,7 @@ Diferentes **placeholders**:\
 <h2>Base de datos</h2>
 
 <details>
-<summary>Ver contenido</summary>
+<summary><strong>Ver contenido</strong></summary>
 <br>
 
 
@@ -234,7 +234,7 @@ database.default.DBDriver = MySQLi
 <h2>Model</h2>
 
 <details>
-<summary>Ver contenido</summary>
+<summary><strong>Ver contenido</strong></summary>
 <br>
 
 </details>
