@@ -30,7 +30,7 @@ The controller is what will become the center of every request to your web appli
 
 
 <details>
-<summary>Ver ejemplo de un controller</summary>
+<summary>Ver ejemplo simple de un controller</summary>
 <br>
 
 Tenemos una clase llamada Pages, con un método View() que acepta un argumento llamado $page. Tambien tiene un método index(). Tanto ```public function view($page = 'home')``` como ```return view('welcome_message')``` son técnicamente funciones, pero cuando creamos una función dentro de una clase, esta es llamada como **método**.
@@ -55,6 +55,40 @@ class Pages extends BaseController
 La clase Pages extiende de BaseController, que a su vez extiende de CodeIgniter\Controller class, lo que significa que la nueva clase Pages tiene acceso a los métodos y propiedades ya definidas en CodeIgniter\Controller class (system/Controller.php).
 
 </details>
+
+<details>
+<summary>Ver ejemplo de un controller con PageNotFoundException</summary>
+<br>
+
+```php
+<?php
+
+namespace App\Controllers;
+
+use CodeIgniter\Exceptions\PageNotFoundException; // Add this line
+
+class Pages extends BaseController
+{
+    // ...
+
+    public function view($page = 'home')
+    {
+        if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {
+            // Whoops, we don't have a page for that!
+            throw new PageNotFoundException($page);
+        }
+
+        $data['title'] = ucfirst($page); // Capitalize the first letter
+
+        return view('templates/header', $data)
+            . view('pages/' . $page)
+            . view('templates/footer');
+    }
+}
+```
+
+</details>
+
 </details>
 
 <hr></hr>
