@@ -28,6 +28,7 @@ The first thing you’re going to do is set up a controller to handle static pag
 
 The controller is what will become the center of every request to your web application. Like any PHP class, you refer to it within your controllers as $this.
 
+Controllers must return a string or a Response object.
 
 <details>
 <summary>Ver ejemplo simple de un controller</summary>
