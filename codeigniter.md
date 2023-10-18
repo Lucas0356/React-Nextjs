@@ -240,7 +240,8 @@ database.default.DBDriver = MySQLi
 <details>
 <summary>Ver ejemplo simple de un model</summary><br>
 
-Ejemplo del archivo NewsModel.php 
+This code looks similar to the controller code that was used earlier. It creates a new model by extending CodeIgniter\Model and loads the database library. This will make the database class available through the $this->db object.
+Se crea un nuevo modelo que extiende de CodeIgniter\Model y carga la libreria de base de datos. 
 ```php
 <?php
 
