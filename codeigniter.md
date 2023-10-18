@@ -80,6 +80,8 @@ La clase Pages extiende de BaseController, que a su vez extiende de CodeIgniter\
     <h1><?= esc($title) ?></h1>
 ```
 
+ **esc() function** => It’s a global function provided by CodeIgniter to help prevent XSS attacks.
+
 </details>
 
 </details>
