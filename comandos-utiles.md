@@ -73,6 +73,11 @@ sudo yum list *palabra a filtrar*
 sudo docker compose up -d
 ```
 
+**Dar de baja al docker**
+```bash
+sudo docker compose down
+```
+
 **Acceder al docker**
 ```
 sudo docker ps -a
