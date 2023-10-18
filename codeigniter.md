@@ -152,7 +152,7 @@ Earlier you set up a controller with a view() method. The method accepts one par
 
 Las rutas se colocan en el archivo routes.php
 
-```javascript
+```php
 $routes->get('/productos', 'Productos::index',[]);
 ```
 - $routes:  objeto de la clase RouteCollection
@@ -163,7 +163,7 @@ $routes->get('/productos', 'Productos::index',[]);
 
 Enrutamiento con parametros ejemplo
 
-```javascript
+```php
   $routes->get('/productos/(:num)', 'Productos::show/$1');
 ```
 - $routes:  objeto de la clase RouteCollection
