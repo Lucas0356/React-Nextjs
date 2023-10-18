@@ -185,5 +185,27 @@ Diferentes **placeholders**:\
 </details>
 
 
+<hr></hr>
+<h2>Base de datos</h2>
 
+<details>
+<summary>Ver contenido</summary>
+<br>
+
+<details>
+<summary>Conexión a base de datos</summary>
+<br>
+
+En el archivo .env, should have the database property settings uncommented and set appropriately for the database you want to use.
+
+```
+database.default.hostname = localhost
+database.default.database = ci4tutorial
+database.default.username = root
+database.default.password = root
+database.default.DBDriver = MySQLi
+```
+
+</details>
+</details>
 
