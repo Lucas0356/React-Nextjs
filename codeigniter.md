@@ -173,14 +173,13 @@ Enrutamiento con parametros ejemplo
 - 'Productos::index' : Controlador::metododelcontrolador
 - $1: parametro para el metodo, $1 tomar el primer parametro.
 
-Diferentes **placeholders**:\
+Diferentes **placeholders**:
 - (:any): coincidira con cualquier caracter desde este punto hasta el final de la url.
 - (:segment): coincidira con cualquier caracter excepte una barra inlinada
 - (:num): coincidira con cualquier numero entero.
 - (:alpha): coincidira con cualquier cadena alfabetico.
 - (:alphanun): combinacion de num y alpha.
 - (:hash): se puede usar facilmente para ver indentificares hash.
-- 
 
 </details>
 
