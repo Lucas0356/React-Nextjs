@@ -146,7 +146,7 @@ $routes->get('/productos', 'Productos::index',[]);
 
 Enrutamiento con parametros ejemplo
 
-```javscript
+```javascript
   $routes->get('/productos/(:num)', 'Productos::show/$1');
 ```
 - $routes:  objeto de la clase RouteCollection
