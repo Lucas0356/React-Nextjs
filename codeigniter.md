@@ -52,7 +52,7 @@ class Pages extends BaseController
     }
 }
 ```
-La clase Page extiende de BaseController, que a su vez extiende de CodeIgniter\Controller class, lo que significa que las nuevas clases Pages tienen acceso a los métodos y propiedades ya definidas en CodeIgniter\Controller class (system/Controller.php).
+La clase Pages extiende de BaseController, que a su vez extiende de CodeIgniter\Controller class, lo que significa que la nueva clase Pages tiene acceso a los métodos y propiedades ya definidas en CodeIgniter\Controller class (system/Controller.php).
 
 </details>
 </details>
