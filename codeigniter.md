@@ -141,10 +141,20 @@ $routes->get('/productos', 'Productos::index',[]);
 - $routes:  objeto de la clase RouteCollection
 - ->get: metodo de peticion http, puede ser post, patch, put, delete, get
 - /productos: ruta que se colocara en la url
-- 'Productos::index : Controlador::metododelcontrolador
+- 'Productos::index' : Controlador::metododelcontrolador
 - []: opciones como filtros o namespace.
 
+Enrutamiento con parametros ejemplo
 
+```javscript
+  $routes->get('/productos/(:num)', 'Productos::show/$1');
+```
+- $routes:  objeto de la clase RouteCollection
+- ->get: metodo de peticion http, puede ser post, patch, put, delete, get
+- /productos: ruta que se colocara en la url.
+- (:num): parametro de la ruta
+- 'Productos::index' : Controlador::metododelcontrolador
+- $1: parametro para el metodo, $1 tomar el primer parametro.
   
 
 </details>
