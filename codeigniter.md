@@ -64,6 +64,8 @@ La clase Pages extiende de BaseController, que a su vez extiende de CodeIgniter\
 <summary>Ver contenido</summary>
 <br>
 
+Earlier you set up a controller with a view() method. The method accepts one parameter, which is the name of the page to be loaded.
+
 <details>
   <summary>Templates</summary><br>
   Podemos crear templates de la siguiente forma:
