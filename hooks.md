@@ -136,9 +136,10 @@ Dentro de App.jsx, utilizamos este proveedor:
 	}
 	
 	export default App;
-	```
+   ```
 
 Finalmente, en los componentes hijos, accedemos a los contextos usando los custom hooks:
+
 ```javascript
 import { useUserContext, useUserToggleContext } from "../provders/UserProvider";
 
