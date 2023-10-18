@@ -229,3 +229,12 @@ database.default.DBDriver = MySQLi
 </details>
 </details>
 
+
+<hr></hr>
+<h2>Model</h2>
+
+<details>
+<summary>Ver contenido</summary>
+<br>
+
+</details>
