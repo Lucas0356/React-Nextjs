@@ -231,8 +231,8 @@ export function usePosts() {
 
 Sirven para memorizar diferentes funciones generadas en nuestros componentes, para que cuando el componente vuelva a renderizarse, esa función ya esté renderizada y no tenga que volver a ser creada. Pudiendo mejorar el rendimiento de nuestra aplicación.
 
-- **[Video explicativo sobre useCallback](https://www.youtube.com/watch?v=duh3uKn0qnU)**
-- **[Video explicativo sobre useCallback 2](https://www.youtube.com/watch?v=dT3bC6M9G70)** 
+**Video sobre useCallback: [Click aquí](https://www.youtube.com/watch?v=duh3uKn0qnU)**
+**Video sobre useCallback2: [Click aquí](https://www.youtube.com/watch?v=dT3bC6M9G70)**
 
 Implementación Básica:
 Primero, importamos el hook que vayamos a utilizar :
@@ -284,7 +284,7 @@ La ventaja es que si la prop count no cambia, se evita la creación de una nueva
 <details>
 <summary><strong>Ver contenido</strong></summary><br>
 
-- **[Video explicativo sobre useEffect](https://www.youtube.com/watch?v=_SPoSMmN3ZU)** 
+**Video sobre useEffect: [Click aquí](https://www.youtube.com/watch?v=_SPoSMmN3ZU)**
 
 El hook useEffect se usa para ejecutar un código cuando se renderiza el componente o cuando cambian las dependencias.
 
@@ -413,7 +413,7 @@ export default Example;
 
 Nos sirve para guardar estados, es una alternativa más compleja al useState. Nos permite tener distintas formas de modificar un estado
 
-- **[Video explicativo sobre useReducer:](https://www.youtube.com/watch?v=BACpj7GmiEo)**
+**Video sobre useReducer: [Click aquí](https://www.youtube.com/watch?v=BACpj7GmiEo)**
 
 Importamos useReducer
 ```javascript
@@ -503,8 +503,9 @@ const categoryFilterId = useId();
 <details>
 <summary><strong>Ver contenido</strong></summary><br>
 
-https://www.youtube.com/watch?v=4RGObDegoXw
-https://www.youtube.com/watch?v=raJjjm3rhhU
+**Video sobre useRef 1: [Click aquí](https://www.youtube.com/watch?v=4RGObDegoXw)**
+
+**Video sobre useRef 2: [Click aquí](https://www.youtube.com/watch?v=raJjjm3rhhU)**
 
 El hook useRef nos permite mantener una referencia, y cuando esa referencia cambia, no renderiza ese componente. Sirve para dos propósitos principales: almacenar valores mutables que no provocan una nueva renderización cuando se actualizan (como mencione antes) y almacenar referencias a elementos del DOM.
 
@@ -521,7 +522,6 @@ vez importado, puedes declarar una variable ref dentro de tu componente funciona
 ```javascript
 const myRef = useRef();
 ```
-
 
 Ahora tienes un objeto ref, miRef, que puedes utilizar para almacenar valores y acceder a ellos. Para utilizar la variable myRef con cualquier elemento, asígnala a la prop ref del elemento.
 
