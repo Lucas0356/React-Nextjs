@@ -234,7 +234,24 @@ database.default.DBDriver = MySQLi
 <h2>Model</h2>
 
 <details>
-<summary><strong>Ver contenido</strong></summary>
-<br>
+<summary><strong>Ver contenido</strong></summary><br>
+
+<details>
+<summary>Ver ejemplo simple de un model</summary><br>
+
+Ejemplo del archivo NewsModel.php 
+```php
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class NewsModel extends Model
+{
+    protected $table = 'news';
+}
+```
+</details>
 
 </details>
