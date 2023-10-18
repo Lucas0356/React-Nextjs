@@ -64,4 +64,24 @@ La clase Pages extiende de BaseController, que a su vez extiende de CodeIgniter\
 <summary>Ver contenido</summary>
 <br>
 
+<details>
+  <summary>Templates</summary><br>
+  Podemos crear templates de la siguiente forma:
+  Creamos el header en app/Views/templates/header.php
+  
+```php
+<!doctype html>
+<html>
+<head>
+    <title>CodeIgniter Tutorial</title>
+</head>
+<body>
+
+    <h1><?= esc($title) ?></h1>
+```
+
+</details>
+
+</details>
+
 
