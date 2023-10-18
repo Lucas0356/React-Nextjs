@@ -124,3 +124,31 @@ Earlier you set up a controller with a view() method. The method accepts one par
 </details>
 
 
+
+
+<hr></hr>
+<h2>Rutas</h2>
+
+<details>
+<summary>Ver contenido</summary>
+<br>
+
+Las rutas se colocan en el archivo routes.php
+
+```javascript
+$routes->get('/productos', 'Productos::index',[]);
+```
+- $routes:  objeto de la clase RouteCollection
+- ->get: metodo de peticion http, puede ser post, patch, put, delete, get
+- /productos: ruta que se colocara en la url
+- 'Productos::index : Controlador::metododelcontrolador
+- []: opciones como filtros o namespace.
+
+
+  
+
+</details>
+
+
+
+
