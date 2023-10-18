@@ -1,28 +1,5 @@
 <h1 align="center"> Documentación de Hooks </h1>
 
-### Índice:
-
-<details>
-<summary><strong>Ver Índice</strong></summary>
-	
-* [Custom Hook](#custom-hook)
-
-* [UseContext](#usecontext)
-  
-* [UseState](#usestate)
-
-* [UseCallback & UseMemo](#usecallback--usememo)
-
-* [UseEffect](#useeffect)
-  
-* [useReducer](#usereducer)
-
-* [useId](#useid)
-
-* [useRef](#useref)
-</details>
-<hr></hr>
-
 ### Custom Hook:
 
 <details>
