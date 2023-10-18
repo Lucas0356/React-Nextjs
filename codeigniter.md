@@ -192,6 +192,26 @@ Diferentes **placeholders**:\
 <summary>Ver contenido</summary>
 <br>
 
+
+<details>
+<summary>Ver ejemplo de una tabla</summary>
+<br>
+
+A note of interest: a “slug”, in the context of web publishing, is a user- and SEO-friendly short text used in a URL to identify and describe a resource.
+
+```mysql
+CREATE TABLE news (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    title VARCHAR(128) NOT NULL,
+    slug VARCHAR(128) NOT NULL,
+    body TEXT NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE slug (slug)
+);
+```
+
+</details>
+
 <details>
 <summary>Conexión a base de datos</summary>
 <br>
