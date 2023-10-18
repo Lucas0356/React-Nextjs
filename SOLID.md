@@ -3,7 +3,7 @@
 Video recomendado sobre SOLID: 
 https://www.youtube.com/watch?v=jKdt-BnTTR0
 
-5 principios SOLID:
+### 5 principios SOLID:
 
 - **S**ingle responsibility principle (SRP)
 - **O**pen-closed principle (OCP)
