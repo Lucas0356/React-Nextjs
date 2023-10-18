@@ -46,6 +46,10 @@ chmod -R 777 writable
 
 <h2>Yum list / install</h2>
 
+<details>
+<summary>Ver comandos</summary>
+<br>
+
 **Para mostrar todos los paquetes o instalaciones necesarias**
 
 ```bash
@@ -62,6 +66,7 @@ sudo yum install 'nombrepaqueteainstalar'
 ```
 sudo yum list *palabra a filtrar*
 ```
+</details>
 <hr></hr>
 
 <h2>Docker</h2>
