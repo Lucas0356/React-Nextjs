@@ -10,6 +10,7 @@ De forma predeterminada, Codeigniter inicia con el **modo de producción**, si q
   
 - **Copiar o renombrar el archivo env como .env** (es importante no subirlo al repositorio de manera pública puesto que este archivo puede contener información sensible).
 - **Descomentamos la línea de con 'CI_ENVIRONMENT' y cambiamos su valor al de producción:**
+  
   ```
   CI_ENVIRONMENT = development
   ```
