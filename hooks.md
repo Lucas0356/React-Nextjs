@@ -1,6 +1,10 @@
 <h1 align="center"> Documentación de Hooks </h1>
 
-## Índice:
+### Índice:
+
+<details>
+<summary><strong>Ver Índice</strong></summary>
+	
 * [Custom Hook](#custom-hook)
 
 * [UseContext](#usecontext)
@@ -16,8 +20,14 @@
 * [useId](#useid)
 
 * [useRef](#useref)
+</details>
+<hr></hr>
 
-#### <h1>Custom Hook:</h1>
+### Custom Hook:
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
+	
 Es una función de JavaScript, su nombre comienza con 'use' y **puede llamar a otros Hooks.**
 
 Estructura de un Custom Hook:
@@ -34,8 +44,13 @@ function useEjemplo(props) {
   return { , } ;
 }
 ```
+</details>
+<hr></hr>
 
-#### <h1>UseContext:</h1>
+### UseContext:
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
 
 Es una herramienta que facilita la transferencia de información entre diferentes componentes, permitiendo un acceso sencillo a los datos proporcionados por el contexto desde cualquier punto de la aplicación. Su utilización es una práctica recomendada ya que elimina la necesidad del "prop drilling" o pasar datos a través de múltiples componentes intermedios.
 
@@ -162,8 +177,13 @@ export default function Hijo () {
     </div>
 }
 ```
+</details>
+<hr></hr>
 
-#### <h1>UseState:</h1>
+### UseState:
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
 
 El hook useState es utilizado para crear variables de estado, quiere decir que su valor es dinámico, que este puede cambiar en el tiempo y eso requiere una re-renderización del componente donde se utiliza
 
@@ -222,7 +242,13 @@ export function usePosts() {
     return { posts }
 }
 ```
-### <h1>UseCallback & useMemo:</h1>
+</details>
+<hr></hr>
+
+### UseCallback & useMemo:
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
 
 Sirven para memorizar diferentes funciones generadas en nuestros componentes, para que cuando el componente vuelva a renderizarse, esa función ya esté renderizada y no tenga que volver a ser creada. Pudiendo mejorar el rendimiento de nuestra aplicación.
 
@@ -271,8 +297,13 @@ const memo = useMemo(doble, [cont])
 ```
 
 La ventaja es que si la prop count no cambia, se evita la creación de una nueva función y se devuelve la función que ya se había calculado previamente.
+</details>
+<hr></hr>
 
-#### <h1>useEffect:</h1>
+### useEffect:
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
 
 - **[Video explicativo sobre useEffect](https://www.youtube.com/watch?v=_SPoSMmN3ZU)** 
 
@@ -393,7 +424,13 @@ export default Example;
     },[user])
 
 ```
-#### <h1>UseReducer:</h1>
+</details>
+<hr></hr>
+
+### UseReducer:
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
 
 Nos sirve para guardar estados, es una alternativa más compleja al useState. Nos permite tener distintas formas de modificar un estado
 
@@ -460,8 +497,13 @@ const [state, dispatch] = useReducer((state = [], action) => {
     }
 });
 ```
+</details>
+<hr></hr>
 
-#### <h1>UseId:</h1>
+### UseId:
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
 
 Este Hook tiene la funcionalidad de generar un identificador único que simpre va a ser el mismo y que funciona con 'server as rendering'. Nos puede ayudar a evitar errores al ingresar nosotros mismos un identificador manualmente.
 
@@ -474,8 +516,14 @@ Ejemplo para generar un identificador único con useId para categoryFilterId
 ```javascript
 const categoryFilterId = useId();
 ```
+</details>
+<hr></hr>
 
-### <h1>useRef</h1>
+### useRef
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
+
 https://www.youtube.com/watch?v=4RGObDegoXw
 https://www.youtube.com/watch?v=raJjjm3rhhU
 
@@ -568,3 +616,5 @@ Cuando se pulsa el botón «Change Color», se invoca la función handleClick. E
 ```javascript
 divRef.current.style.backgroundColor = 'red';
 ```
+</details>
+<hr></hr>
