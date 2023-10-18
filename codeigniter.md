@@ -1,5 +1,7 @@
 <h1>Codeigniter</h1>
 
+**Documentación oficial: [Click aquí](https://www.codeigniter.com/user_guide/tutorial)**
+
 <hr></hr>
 <h2>Activar modo de desarrollo</h2>
 
