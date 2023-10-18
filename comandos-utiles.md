@@ -66,6 +66,10 @@ sudo yum list *palabra a filtrar*
 
 <h2>Docker</h2>
 
+<details>
+<summary>Ver comandos</summary>
+<br>
+
 **Levantar docker**
 
 <sub>PD: El -d es para que corra en segundo plano como si fuera un demonio.</sub>
@@ -98,6 +102,7 @@ sudo docksh docker-scm-1
 ```
 exit
 ```
+</details>
 
 <hr></hr>
 
