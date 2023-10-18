@@ -61,7 +61,7 @@ export default function App() {
 
 Uso en Componentes Hijos:
 Para utilizar el contexto en un componente hijo, simplemente importamos useContext de React y el contexto que hemos creado:
-```javascript
+```jsx
 import { useContext } from 'react';
 import { ejemploContext } from '../App';
 
@@ -71,6 +71,7 @@ export default function Hijo() {
   return (
     <div>
       <p>Hijo</p>
+      <p>{ejemplo}</p>
     </div>
   );
 }
