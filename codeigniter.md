@@ -37,7 +37,24 @@ Controllers must return a string or a Response object.
 Tenemos una clase llamada Pages, con un método View() que acepta un argumento llamado $page. Tambien tiene un método index(). Tanto ```public function view($page = 'home')``` como ```return view('welcome_message')``` son técnicamente funciones, pero cuando creamos una función dentro de una clase, esta es llamada como **método**.
 ```php
 <?php
+/*
+El error que estás viendo, "Call to undefined function get()", ocurre en la línea 11 de tu código. Parece que estás tratando de utilizar el método "get()" en el objeto "$routes", pero el error indica que no se puede encontrar una función llamada "get()" en el contexto actual.
 
+En el código de rutas en CodeIgniter 4, generalmente no se utiliza "get()" para definir rutas HTTP GET. En su lugar, las rutas se definen utilizando el método apropiado para el tipo de solicitud HTTP que deseas manejar. Para definir una ruta para una solicitud GET, debes usar el método "get()" directamente en el objeto "$routes".
+
+Así que en lugar de esto:
+
+php
+
+$routes.get('/home', 'Home::index');
+
+Debes usar:
+
+php
+
+$routes->get('/home', 'Home::index');
+
+*/
 namespace App\Controllers;
 
 class Pages extends BaseController
@@ -152,10 +169,18 @@ Enrutamiento con parametros ejemplo
 - $routes:  objeto de la clase RouteCollection
 - ->get: metodo de peticion http, puede ser post, patch, put, delete, get
 - /productos: ruta que se colocara en la url.
-- (:num): parametro de la ruta
+- (:num): parametro de la ruta o tambien llamado **placeholder**.
 - 'Productos::index' : Controlador::metododelcontrolador
 - $1: parametro para el metodo, $1 tomar el primer parametro.
-  
+
+Diferentes **placeholders**:\
+- (:any): coincidira con cualquier caracter desde este punto hasta el final de la url.
+- (:segment): coincidira con cualquier caracter excepte una barra inlinada
+- (:num): coincidira con cualquier numero entero.
+- (:alpha): coincidira con cualquier cadena alfabetico.
+- (:alphanun): combinacion de num y alpha.
+- (:hash): se puede usar facilmente para ver indentificares hash.
+- 
 
 </details>
 
