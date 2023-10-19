@@ -1,8 +1,11 @@
 ## Comandos Git
 
 
-<h2>AÑADIR ARCHIVOS</h2>
+### AÑADIR ARCHIVOS
 
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
+  
 - **Añadir el archivo con el nombre indicado**
 ```bash
 git add <nombre_archivo>
@@ -11,6 +14,7 @@ git add <nombre_archivo>
 ```bash
 git add .
 ```
+</details>
 
 <h2>COMMIT</h2>
 
