@@ -1,6 +1,11 @@
 <h1 align="center"> Funciones o logica para reutilizar o darse una idea de como hacer cierta cosas </h1>
 
-**Paginacion FACIL** con BOTON ANTERIOR/SIGUIENTE => https://www.youtube.com/watch?v=Q9jT1fZTV38
+### Paginación FÁCIL con BOTON ANTERIOR/SIGUIENTE 
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
+  
+video: https://www.youtube.com/watch?v=Q9jT1fZTV38
 
 ```javascript
 "use client";
@@ -67,7 +72,13 @@ export default function ListOfPosts() {
   );
 }
 ```
-<h2>APIS Y FETCH</h2>
+</details>
+
+### APIS Y FETCH
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
+  
 La mejor forma de hacer fetch de una API: **importante ponerla como si fuera un servicio**
 
 ```javascript
@@ -197,8 +208,13 @@ export function useCatImage ({ fact }) {
 }
 ```
 
-Ejemplo de uso de evento: **onChange** para tomar valor del input:
+</details>
 
+### Ejemplo de uso de evento: onChange para tomar valor del input:
+
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
+  
 ```javascript
 const [name, setName] = useState('');
 
@@ -220,8 +236,6 @@ return (
       />
   </div>
 )
-
 ```
-
-
+</details>
 
