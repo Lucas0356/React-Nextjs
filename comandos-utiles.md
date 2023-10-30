@@ -123,3 +123,51 @@ php -S <mi_ip>:8080 -t .
 [~/proyectos/scm/backend/src]
 [SYS]🥊frios >  composer install --no-dev --ignore-platform-reqs
 ```
+
+
+
+```javascript
+[SYS]🥊frios > cd /etc/sistemas/db/
+[/etc/sistemas/db]
+[SYS]🥊frios > ll
+total 4
+-rw-r----- 1 lmoltedo sistemas 3208 sep 14 12:47 mydev.ini
+[/etc/sistemas/db]
+[SYS]🥊frios > rm mydev.ini 
+rm: ¿borrar el fichero regular 'mydev.ini'  protegido contra escritura? (s/n) s
+[/etc/sistemas/db]
+[SYS]🥊frios > ll
+total 0
+[/etc/sistemas/db]
+[SYS]🥊frios > mv /tmp/mydev.ini 
+mv: falta el fichero de destino después de '/tmp/mydev.ini'
+Pruebe 'mv --help' para más información.
+[/etc/sistemas/db]
+[SYS]🥊frios > mv /tmp/mydev.ini .
+mv: no se puede mover '/tmp/mydev.ini' a './mydev.ini': Operación no permitida
+[/etc/sistemas/db]
+[SYS]🥊frios > sudo mv /tmp/mydev.ini .
+[/etc/sistemas/db]
+[SYS]🥊frios > ll
+total 4
+-rwxr-xr-- 1 msarli sistemas 3321 oct 30 11:51 mydev.ini
+[/etc/sistemas/db]
+[SYS]🥊frios > sudo chown frios.sistemas
+chown: falta un operando después de «frios.sistemas»
+Pruebe 'chown --help' para más información.
+[/etc/sistemas/db]
+[SYS]🥊frios > sudo chown frios.sistemas .
+[/etc/sistemas/db]
+[SYS]🥊frios > ll
+total 4
+-rwxr-xr-- 1 msarli sistemas 3321 oct 30 11:51 mydev.ini
+[/etc/sistemas/db]
+[SYS]🥊frios > sudo chown frios.sistemas mydev.ini 
+[/etc/sistemas/db]
+[SYS]🥊frios > ll
+total 4
+-rwxr-xr-- 1 frios sistemas 3321 oct 30 11:51 mydev.ini
+[/etc/sistemas/db]
+[SYS]🥊frios > 
+
+```
