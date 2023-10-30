@@ -39,4 +39,18 @@ git commit -am "mensaje del commit"
 
 <h2>MERGE</h2>
 
+<details>
+<summary><strong>Ver contenido</strong></summary><br>
+
+```bash
+git checkout master
+git merge rama_de_trabajo
+git branch -d rama_de_trabajo
+```
+
+En este ejemplo, primero se cambia a la rama main, se realiza un git merge con la rama o branch secundaria “rama_de_trabajo”, que conecta ambas ramas, y luego se elimina la rama secundaria redundante con el comando “git branch -d”.
+
+
+</details>
+
 <h2>REBASE</h2>
