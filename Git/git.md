@@ -50,7 +50,20 @@ git branch -d rama_de_trabajo
 
 En este ejemplo, primero se cambia a la rama main, se realiza un git merge con la rama o branch secundaria “rama_de_trabajo”, que conecta ambas ramas, y luego se elimina la rama secundaria redundante con el comando “git branch -d”.
 
-
 </details>
 
 <h2>REBASE</h2>
+
+<h2>REVERT</h2>
+
+<details>
+
+<summary><strong>Ver contenido</strong></summary><br>
+
+```bash
+git revert -m 1 eef3f4c7755996fee6c75364cfed6494ac3a1a71o
+```
+
+</details>
+
+
