@@ -181,3 +181,6 @@ cd proyectos/scm/backend/src/writable/logs
 :$
 ```
 
+![image](https://github.com/Lucas0356/React-Nextjs/assets/83616825/cf77bf18-da1f-4638-94a6-411a5858c23a)
+
+
