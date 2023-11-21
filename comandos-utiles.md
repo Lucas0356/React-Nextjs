@@ -1,4 +1,3 @@
-![image](https://github.com/Lucas0356/React-Nextjs/assets/83616825/c730f3b8-90c2-4cc3-b6b0-ddd9689f4234)<h2>SCP</h2>
 
 **Para copiar archivos origen@destino:/ruta..**
 
