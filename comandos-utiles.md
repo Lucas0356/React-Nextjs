@@ -1,4 +1,4 @@
-<h2>SCP</h2>
+![image](https://github.com/Lucas0356/React-Nextjs/assets/83616825/c730f3b8-90c2-4cc3-b6b0-ddd9689f4234)<h2>SCP</h2>
 
 **Para copiar archivos origen@destino:/ruta..**
 
@@ -171,3 +171,13 @@ total 4
 [SYS]🥊frios > 
 
 ```
+
+```javascript
+VER LOS LOGS DEL BACKEND
+
+cd proyectos/scm/backend/src/writable/logs
+[SYS]🥊frios > ls -ltr
+[SYS]🥊frios > vi critical.log 
+:$
+```
+
